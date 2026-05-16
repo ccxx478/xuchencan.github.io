@@ -23,9 +23,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 .page{display:none;min-height:100vh;flex-direction:column}
 .page.active{display:flex}
 
-/* NAV */
 nav{display:flex;justify-content:space-between;align-items:center;padding:18px 48px;border-bottom:0.5px solid var(--border);position:sticky;top:0;background:var(--bg);z-index:100}
-.logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer;color:var(--text);border:none;background:none}
+.logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer;color:var(--text);border:none;background:none;text-align:left}
 .logo-sub{font-size:10px;letter-spacing:0.06em;color:var(--text3);font-family:'DM Sans',sans-serif;font-weight:300;display:block;margin-top:2px;text-transform:none}
 .nav-center{display:flex;gap:36px}
 .nav-link{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text2);cursor:pointer;transition:color 0.2s;border:none;background:none;font-family:'DM Sans',sans-serif}
@@ -34,9 +33,8 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:18px 4
 .lang-btn{border:none;background:none;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:500;color:var(--text2);padding:4px 9px;border-radius:16px;cursor:pointer;letter-spacing:0.04em}
 .lang-btn.active{background:var(--bg);color:var(--text);border:0.5px solid var(--border2)}
 
-/* HERO */
-.hero{display:grid;grid-template-columns:1fr 1fr;flex:1}
-.hero-left{padding:80px 56px 80px 48px;display:flex;flex-direction:column;justify-content:center;border-right:0.5px solid var(--border)}
+.hero{display:grid;grid-template-columns:1fr 1fr;flex:1;min-height:520px}
+.hero-left{padding:72px 56px 72px 48px;display:flex;flex-direction:column;justify-content:center;border-right:0.5px solid var(--border)}
 .hero-label{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--text2);margin-bottom:20px}
 .hero-title{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;line-height:1.12;margin-bottom:16px}
 .hero-title em{font-style:italic}
@@ -46,34 +44,22 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:18px 4
 .btn-primary:hover{opacity:0.82}
 .btn-ghost{display:inline-block;background:none;color:var(--text);font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;padding:14px 28px;border:0.5px solid var(--border2);cursor:pointer;text-transform:uppercase;margin-bottom:8px;transition:background 0.2s}
 .btn-ghost:hover{background:var(--bg2)}
-.hero-right{background:var(--bg2);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;color:var(--text3);min-height:520px}
-.hero-right span{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3)}
+.hero-right{position:relative;overflow:hidden;background:var(--bg2)}
+.hero-right img{width:100%;height:100%;object-fit:cover;display:block}
 
-/* PHILOSOPHY BANNER */
 .philosophy-banner{background:var(--text);color:var(--bg);padding:20px 48px;display:flex;align-items:center;justify-content:space-between;gap:32px}
 .phil-item{text-align:center;flex:1}
 .phil-label{font-size:9px;letter-spacing:0.16em;text-transform:uppercase;opacity:0.5;margin-bottom:6px}
-.phil-value{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300}
-.phil-divider{width:0.5px;height:40px;background:rgba(255,255,255,0.2)}
+.phil-value{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300}
+.phil-divider{width:0.5px;height:40px;background:rgba(255,255,255,0.2);flex-shrink:0}
 
-/* WECHAT NOTICE */
 .wechat-notice{padding:14px 48px;background:var(--bg2);border-top:0.5px solid var(--border);border-bottom:0.5px solid var(--border);display:flex;align-items:flex-start;gap:12px}
 .wechat-notice p{font-size:13px;color:var(--text2);line-height:1.6}
 .wechat-notice strong{color:var(--text);font-weight:500}
 
-/* SECTIONS */
 .section{padding:64px 48px;border-top:0.5px solid var(--border)}
 .section-label{font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--text3);margin-bottom:28px}
 
-/* PAIN GRID */
-.pain-grid{display:grid;grid-template-columns:1fr 1fr 1fr;border:0.5px solid var(--border)}
-.pain-item{padding:28px 24px;border-right:0.5px solid var(--border)}
-.pain-item:last-child{border-right:none}
-.pain-icon{font-size:20px;margin-bottom:12px}
-.pain-title{font-size:13px;font-weight:500;margin-bottom:8px}
-.pain-desc{font-size:12px;color:var(--text2);line-height:1.65}
-
-/* PREVENT VS TREAT */
 .pvt-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:0.5px solid var(--border);margin-bottom:32px}
 .pvt-item{background:var(--bg);padding:32px 28px}
 .pvt-item.highlight{background:var(--amber-bg)}
@@ -86,7 +72,13 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:18px 4
 .pvt-points li::before{content:'—';position:absolute;left:0;color:var(--text3)}
 .pvt-points li.good-point{color:var(--text)}
 
-/* TECH FEATURES */
+.pain-grid{display:grid;grid-template-columns:1fr 1fr 1fr;border:0.5px solid var(--border)}
+.pain-item{padding:28px 24px;border-right:0.5px solid var(--border)}
+.pain-item:last-child{border-right:none}
+.pain-icon{font-size:20px;margin-bottom:12px}
+.pain-title{font-size:13px;font-weight:500;margin-bottom:8px}
+.pain-desc{font-size:12px;color:var(--text2);line-height:1.65}
+
 .features{border:0.5px solid var(--border)}
 .feature-row{display:grid;grid-template-columns:1fr 1fr;border-bottom:0.5px solid var(--border)}
 .feature-row:last-child{border-bottom:none}
@@ -94,36 +86,32 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:18px 4
 .feature-num{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:var(--text3);margin-bottom:10px}
 .feature-title{font-size:15px;font-weight:500;margin-bottom:10px}
 .feature-desc{font-size:13px;color:var(--text2);line-height:1.65}
-.feature-img{background:var(--bg2);border-left:0.5px solid var(--border);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:var(--text3);min-height:160px}
-.feature-img span{font-size:10px;letter-spacing:0.08em;text-transform:uppercase}
+.feature-img{border-left:0.5px solid var(--border);overflow:hidden;min-height:200px;background:var(--bg2);display:flex;align-items:center;justify-content:center}
+.feature-img img{width:100%;height:100%;object-fit:cover;display:block}
 
-/* STATS */
 .stats{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;border:0.5px solid var(--border);margin-bottom:32px}
 .stat{padding:24px 16px;text-align:center;border-right:0.5px solid var(--border)}
 .stat:last-child{border-right:none}
 .stat-num{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;margin-bottom:6px}
 .stat-label{font-size:10px;color:var(--text2);letter-spacing:0.1em;text-transform:uppercase;line-height:1.4}
 
-/* AWARDS */
 .awards-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:0.5px solid var(--border)}
-.award-item{background:var(--bg);padding:24px 20px;display:flex;align-items:flex-start;gap:14px}
-.award-icon{font-size:24px;flex-shrink:0}
+.award-item{background:var(--bg)}
+.award-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.award-content{padding:20px}
 .award-title{font-size:13px;font-weight:500;margin-bottom:4px}
 .award-desc{font-size:11px;color:var(--text2);line-height:1.55}
 
-/* REVIEWS */
 .reviews{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
-.review{background:var(--bg2);padding:20px;border-radius:2px}
+.review{background:var(--bg2);padding:20px}
 .stars{font-size:11px;color:var(--amber);letter-spacing:2px;margin-bottom:10px}
 .review-text{font-size:12px;line-height:1.65;font-style:italic;margin-bottom:12px}
 .review-name{font-size:10px;font-weight:500;color:var(--text2);text-transform:uppercase;letter-spacing:0.08em}
 
-/* CTA */
 .cta-section{padding:72px 48px;border-top:0.5px solid var(--border);text-align:center;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center}
 .cta-title{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:300;margin-bottom:14px}
 .cta-sub{font-size:14px;color:var(--text2);margin-bottom:32px}
 
-/* FOOTER */
 footer{border-top:0.5px solid var(--border);padding:24px 48px;display:flex;justify-content:space-between;align-items:flex-start}
 .footer-logo{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:300;letter-spacing:0.12em;text-transform:uppercase;color:var(--text)}
 .footer-sub{font-size:10px;color:var(--text3);margin-top:4px}
@@ -131,7 +119,6 @@ footer{border-top:0.5px solid var(--border);padding:24px 48px;display:flex;justi
 .footer-link{font-size:10px;color:var(--text3);letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border:none;background:none;font-family:'DM Sans',sans-serif}
 .footer-link:hover{color:var(--text2)}
 
-/* SUBPAGE */
 .subpage-hero{padding:64px 48px 48px;border-bottom:0.5px solid var(--border)}
 .subpage-back{display:inline-flex;align-items:center;gap:6px;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text2);cursor:pointer;margin-bottom:28px;border:none;background:none;font-family:'DM Sans',sans-serif}
 .subpage-back:hover{color:var(--text)}
@@ -139,12 +126,11 @@ footer{border-top:0.5px solid var(--border);padding:24px 48px;display:flex;justi
 .subpage-sub{font-size:14px;color:var(--text2);line-height:1.8;max-width:600px}
 .subpage-body{padding:48px;flex:1}
 
-/* PRODUCT GRID */
-.product-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:0.5px solid var(--border);margin-bottom:48px}
+/* PRODUCT GRID — 3 columns for 5 products (last row left-aligned) */
+.product-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--border);border:0.5px solid var(--border);margin-bottom:48px}
 .product-card{background:var(--bg)}
-.product-img{background:var(--bg2);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--text3);flex-direction:column;gap:8px}
-.product-img span{font-size:10px;letter-spacing:0.08em;text-transform:uppercase}
-.product-img.amber-tint{background:linear-gradient(135deg,var(--bg2),var(--amber-bg))}
+.product-img-box{background:var(--bg2);aspect-ratio:4/3;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.product-img-box img{width:100%;height:100%;object-fit:cover;display:block}
 .product-info{padding:20px 20px 24px}
 .product-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;margin-bottom:6px}
 .product-series{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text3);margin-bottom:10px}
@@ -154,13 +140,11 @@ footer{border-top:0.5px solid var(--border);padding:24px 48px;display:flex;justi
 .product-tag.featured{background:var(--amber);color:white}
 .product-price{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300}
 
-/* RX SERVICE BANNER */
 .rx-banner{background:var(--amber-bg);border:0.5px solid var(--amber);padding:28px 32px;margin-bottom:48px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
-.rx-banner-title{font-size:14px;font-weight:500;color:var(--amber);margin-bottom:8px;letter-spacing:0.04em}
+.rx-banner-title{font-size:14px;font-weight:500;color:var(--amber);margin-bottom:8px}
 .rx-banner-desc{font-size:13px;color:var(--text2);line-height:1.65}
 .btn-amber{background:var(--amber);color:white;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.08em;padding:12px 24px;border:none;cursor:pointer;text-transform:uppercase;white-space:nowrap}
 
-/* LENS TECH */
 .lens-tech{border:0.5px solid var(--border);margin-bottom:48px}
 .lens-tech-header{padding:20px 24px;border-bottom:0.5px solid var(--border);background:var(--bg2)}
 .lens-tech-title{font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase}
@@ -170,14 +154,12 @@ footer{border-top:0.5px solid var(--border);padding:24px 48px;display:flex;justi
 .layer-title{font-size:12px;font-weight:500;margin-bottom:6px}
 .layer-desc{font-size:11px;color:var(--text2);line-height:1.6}
 
-/* STEPS */
 .steps{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:1px;background:var(--border);border:0.5px solid var(--border)}
 .step{background:var(--bg);padding:24px 20px}
 .step-num{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--text3);margin-bottom:10px}
 .step-title{font-size:12px;font-weight:500;margin-bottom:6px}
 .step-desc{font-size:11px;color:var(--text2);line-height:1.6}
 
-/* ABOUT */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:48px}
 .about-block-title{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text3);margin-bottom:14px}
 .about-text{font-size:14px;color:var(--text2);line-height:1.8}
@@ -189,8 +171,11 @@ footer{border-top:0.5px solid var(--border);padding:24px 48px;display:flex;justi
 .cred-item{background:var(--bg);padding:20px}
 .cred-label{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:6px}
 .cred-value{font-size:13px;color:var(--text);line-height:1.55}
+.cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:0.5px solid var(--border);margin-bottom:48px}
+.cert-item{background:var(--bg)}
+.cert-img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.cert-label{padding:12px 16px;font-size:11px;color:var(--text2);letter-spacing:0.06em;border-top:0.5px solid var(--border)}
 
-/* CONTACT */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:0.5px solid var(--border);margin-bottom:32px}
 .contact-block{background:var(--bg);padding:32px 28px}
 .contact-block-title{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text3);margin-bottom:18px}
@@ -208,19 +193,14 @@ footer{border-top:0.5px solid var(--border);padding:24px 48px;display:flex;justi
 
 [data-lang-inline]{display:none}
 [data-lang-inline].show{display:inline}
-[data-lang-block]{display:none}
-[data-lang-block].show{display:block}
 </style>
 </head>
 <body>
 
-<!-- ══════════════════ PAGE: HOME ══════════════════ -->
+<!-- ══════════════════ HOME ══════════════════ -->
 <div class="page active" id="page-home">
   <nav>
-    <button class="logo" onclick="goHome()">
-      Revue
-      <span class="logo-sub">聆观睿智 · 朝目聆观科技</span>
-    </button>
+    <button class="logo" onclick="goHome()">Revue<span class="logo-sub">聆观睿智 · 朝目聆观科技</span></button>
     <div class="nav-center">
       <button class="nav-link" onclick="goPage('shop')"><span data-lang-inline="en" class="show">Shop</span><span data-lang-inline="ja">ショップ</span><span data-lang-inline="ko">쇼핑</span><span data-lang-inline="zh">选购</span></button>
       <button class="nav-link" onclick="goPage('about')"><span data-lang-inline="en" class="show">About</span><span data-lang-inline="ja">会社概要</span><span data-lang-inline="ko">소개</span><span data-lang-inline="zh">关于我们</span></button>
@@ -237,189 +217,122 @@ footer{border-top:0.5px solid var(--border);padding:24px 48px;display:flex;justi
   <div class="hero">
     <div class="hero-left">
       <p class="hero-label"><span data-lang-inline="en" class="show">Natural Light Optical Protection</span><span data-lang-inline="ja">自然光視覚保護</span><span data-lang-inline="ko">자연광 시각 보호</span><span data-lang-inline="zh">自然光护目镜系列</span></p>
-      <h1 class="hero-title">
-        <span data-lang-inline="en" class="show"><em>Prevent.</em><br>Not treat.</span>
-        <span data-lang-inline="ja"><em>予防する。</em><br>治療ではなく。</span>
-        <span data-lang-inline="ko"><em>예방하다.</em><br>치료가 아니라.</span>
-        <span data-lang-inline="zh"><em>预防，</em><br>胜于治疗。</span>
-      </h1>
-      <p class="hero-tagline">
-        <span data-lang-inline="en" class="show">Ultra Protect — Every Vision</span>
-        <span data-lang-inline="ja">あらゆる視力を極致防護</span>
-        <span data-lang-inline="ko">모든 시력을 극한 보호</span>
-        <span data-lang-inline="zh">极致防护每个人视力</span>
-      </p>
-      <p class="hero-sub">
-        <span data-lang-inline="en" class="show">Nano-biomimetic lens technology that converts harmful electronic screen light into natural light — protecting before damage occurs, not after.</span>
-        <span data-lang-inline="ja">電子スクリーンの有害光を自然光に変換するナノ仿生レンズ技術。ダメージが起きる前に守る。</span>
-        <span data-lang-inline="ko">전자 화면의 유해광을 자연광으로 변환하는 나노 바이오미메틱 렌즈 기술. 손상 전에 보호합니다.</span>
-        <span data-lang-inline="zh">纳米仿生镜片技术，将电子屏有害光转换为自然光——在伤害发生之前保护，而非之后修复。</span>
-      </p>
-      <button class="btn-primary" onclick="showTryOnModal()">
-        <span data-lang-inline="en" class="show">Try On Virtually</span><span data-lang-inline="ja">バーチャル試着</span><span data-lang-inline="ko">가상 착용해보기</span><span data-lang-inline="zh">AI虚拟试戴</span>
-      </button>
-      <button class="btn-ghost" onclick="goPage('shop')">
-        <span data-lang-inline="en" class="show">View Collection</span><span data-lang-inline="ja">コレクションを見る</span><span data-lang-inline="ko">컬렉션 보기</span><span data-lang-inline="zh">浏览产品系列</span>
-      </button>
+      <h1 class="hero-title"><span data-lang-inline="en" class="show"><em>Prevent.</em><br>Not treat.</span><span data-lang-inline="ja"><em>予防する。</em><br>治療ではなく。</span><span data-lang-inline="ko"><em>예방하다.</em><br>치료가 아니라.</span><span data-lang-inline="zh"><em>预防，</em><br>胜于治疗。</span></h1>
+      <p class="hero-tagline"><span data-lang-inline="en" class="show">Ultra Protect — Every Vision</span><span data-lang-inline="ja">あらゆる視力を極致防護</span><span data-lang-inline="ko">모든 시력을 극한 보호</span><span data-lang-inline="zh">极致防护每个人视力</span></p>
+      <p class="hero-sub"><span data-lang-inline="en" class="show">Nano-biomimetic lens technology that converts harmful electronic screen light into natural light — protecting before damage occurs, not after.</span><span data-lang-inline="ja">電子スクリーンの有害光を自然光に変換するナノ仿生レンズ技術。ダメージが起きる前に守る。</span><span data-lang-inline="ko">전자 화면의 유해광을 자연광으로 변환하는 나노 바이오미메틱 렌즈 기술. 손상 전에 보호합니다.</span><span data-lang-inline="zh">纳米仿生镜片技术，将电子屏有害光转换为自然光——在伤害发生之前保护，而非之后修复。</span></p>
+      <button class="btn-primary" onclick="showTryOnModal()"><span data-lang-inline="en" class="show">Try On Virtually</span><span data-lang-inline="ja">バーチャル試着</span><span data-lang-inline="ko">가상 착용해보기</span><span data-lang-inline="zh">AI虚拟试戴</span></button>
+      <button class="btn-ghost" onclick="goPage('shop')"><span data-lang-inline="en" class="show">View Collection</span><span data-lang-inline="ja">コレクションを見る</span><span data-lang-inline="ko">컬렉션 보기</span><span data-lang-inline="zh">浏览产品系列</span></button>
     </div>
     <div class="hero-right">
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" style="opacity:0.22"><circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="1.5"/><path d="M8 24c0-8.837 7.163-16 16-16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="24" cy="24" r="6" stroke="currentColor" stroke-width="1.5"/></svg>
-      <span><span data-lang-inline="en" class="show">Hero product photo</span><span data-lang-inline="ja">メイン商品写真</span><span data-lang-inline="ko">메인 제품 사진</span><span data-lang-inline="zh">主视觉产品图</span></span>
+      <img src="hero.png" alt="Revue Eyewear — Natural Light Protection">
     </div>
   </div>
 
-  <!-- PHILOSOPHY BANNER -->
   <div class="philosophy-banner">
-    <div class="phil-item">
-      <div class="phil-label"><span data-lang-inline="en" class="show">Core Philosophy</span><span data-lang-inline="ja">基本理念</span><span data-lang-inline="ko">핵심 철학</span><span data-lang-inline="zh">核心理念</span></div>
-      <div class="phil-value"><span data-lang-inline="en" class="show">Prevention over Treatment</span><span data-lang-inline="ja">治療より予防</span><span data-lang-inline="ko">치료보다 예방</span><span data-lang-inline="zh">预防胜于治疗</span></div>
-    </div>
+    <div class="phil-item"><div class="phil-label"><span data-lang-inline="en" class="show">Core Philosophy</span><span data-lang-inline="zh">核心理念</span></div><div class="phil-value"><span data-lang-inline="en" class="show">Prevention over Treatment</span><span data-lang-inline="ja">治療より予防</span><span data-lang-inline="ko">치료보다 예방</span><span data-lang-inline="zh">预防胜于治疗</span></div></div>
     <div class="phil-divider"></div>
-    <div class="phil-item">
-      <div class="phil-label"><span data-lang-inline="en" class="show">Core Technology</span><span data-lang-inline="ja">中核技術</span><span data-lang-inline="ko">핵심 기술</span><span data-lang-inline="zh">核心技术</span></div>
-      <div class="phil-value"><span data-lang-inline="en" class="show">Nano Biomimetic Diffusion</span><span data-lang-inline="ja">ナノ仿生拡散</span><span data-lang-inline="ko">나노 생체모방 확산</span><span data-lang-inline="zh">纳米仿生扩散光学</span></div>
-    </div>
+    <div class="phil-item"><div class="phil-label"><span data-lang-inline="en" class="show">Core Technology</span><span data-lang-inline="zh">核心技术</span></div><div class="phil-value"><span data-lang-inline="en" class="show">Nano Biomimetic Diffusion</span><span data-lang-inline="ja">ナノ仿生拡散</span><span data-lang-inline="ko">나노 생체모방 확산</span><span data-lang-inline="zh">纳米仿生扩散光学</span></div></div>
     <div class="phil-divider"></div>
-    <div class="phil-item">
-      <div class="phil-label"><span data-lang-inline="en" class="show">Lens Layers</span><span data-lang-inline="ja">レンズ層数</span><span data-lang-inline="ko">렌즈 레이어</span><span data-lang-inline="zh">镜片层数</span></div>
-      <div class="phil-value">15 <span style="font-size:14px;opacity:0.6"><span data-lang-inline="en" class="show">nano layers</span><span data-lang-inline="ja">ナノ層</span><span data-lang-inline="ko">나노 레이어</span><span data-lang-inline="zh">层纳米膜</span></span></div>
-    </div>
+    <div class="phil-item"><div class="phil-label"><span data-lang-inline="en" class="show">Lens Layers</span><span data-lang-inline="zh">镜片层数</span></div><div class="phil-value">15 <span style="font-size:13px;opacity:0.6"><span data-lang-inline="en" class="show">nano layers</span><span data-lang-inline="zh">层纳米膜</span></span></div></div>
     <div class="phil-divider"></div>
-    <div class="phil-item">
-      <div class="phil-label"><span data-lang-inline="en" class="show">Certified By</span><span data-lang-inline="ja">認証機関</span><span data-lang-inline="ko">인증 기관</span><span data-lang-inline="zh">质检认证</span></div>
-      <div class="phil-value"><span data-lang-inline="en" class="show">NOTC · BS EN ISO</span><span data-lang-inline="ja">NOTC · BS EN ISO</span><span data-lang-inline="ko">NOTC · BS EN ISO</span><span data-lang-inline="zh">国家眼镜质检中心</span></div>
-    </div>
+    <div class="phil-item"><div class="phil-label"><span data-lang-inline="en" class="show">Certified By</span><span data-lang-inline="zh">质检认证</span></div><div class="phil-value">NOTC · BS EN ISO</div></div>
   </div>
 
   <div class="wechat-notice">
     <span style="font-size:18px;flex-shrink:0;margin-top:1px">💬</span>
-    <p>
-      <span data-lang-inline="en" class="show"><strong>AI Virtual Try-On is available on WeChat Mini Program.</strong> Search <strong>「聆观睿智亮睛鲸」</strong> in WeChat. Web version coming soon.</span>
-      <span data-lang-inline="ja"><strong>AIバーチャル試着はWeChatミニプログラムでご利用いただけます。</strong>WeChatで<strong>「聆观睿智亮睛鲸」</strong>を検索。Web版は近日公開予定。</span>
-      <span data-lang-inline="ko"><strong>AI 가상 착용은 WeChat 미니 프로그램에서 이용 가능합니다.</strong> WeChat에서 <strong>「聆观睿智亮睛鲸」</strong> 검색. 웹 버전 곧 출시.</span>
-      <span data-lang-inline="zh"><strong>AI虚拟试戴功能目前在微信小程序中使用。</strong>微信搜索<strong>「聆观睿智亮睛鲸」</strong>即可体验。网页版即将上线。</span>
-    </p>
+    <p><span data-lang-inline="en" class="show"><strong>AI Virtual Try-On is available on WeChat Mini Program.</strong> Search <strong>「聆观睿智亮睛鲸」</strong> in WeChat. Web version coming soon.</span><span data-lang-inline="ja"><strong>AIバーチャル試着はWeChatミニプログラムでご利用いただけます。</strong>WeChatで<strong>「聆观睿智亮睛鲸」</strong>を検索。</span><span data-lang-inline="ko"><strong>AI 가상 착용은 WeChat 미니 프로그램에서 이용 가능합니다.</strong> WeChat에서 <strong>「聆观睿智亮睛鲸」</strong> 검색.</span><span data-lang-inline="zh"><strong>AI虚拟试戴功能目前在微信小程序中使用。</strong>微信搜索<strong>「聆观睿智亮睛鲸」</strong>即可体验。网页版即将上线。</span></p>
   </div>
 
-  <!-- WHY — PREVENT NOT TREAT -->
   <div class="section">
-    <p class="section-label"><span data-lang-inline="en" class="show">Our Approach</span><span data-lang-inline="ja">私たちのアプローチ</span><span data-lang-inline="ko">우리의 접근 방식</span><span data-lang-inline="zh">我们的理念</span></p>
+    <p class="section-label"><span data-lang-inline="en" class="show">Our Approach</span><span data-lang-inline="ja">アプローチ</span><span data-lang-inline="ko">접근 방식</span><span data-lang-inline="zh">我们的理念</span></p>
     <div class="pvt-grid">
       <div class="pvt-item highlight">
         <span class="pvt-badge good"><span data-lang-inline="en" class="show">Revue Philosophy</span><span data-lang-inline="ja">Revueの理念</span><span data-lang-inline="ko">Revue 철학</span><span data-lang-inline="zh">Revue理念</span></span>
         <div class="pvt-title"><span data-lang-inline="en" class="show">Protective, not corrective.</span><span data-lang-inline="ja">治療でなく、防護。</span><span data-lang-inline="ko">교정이 아닌 보호.</span><span data-lang-inline="zh">防护，而非治疗。</span></div>
         <ul class="pvt-points">
           <li class="good-point"><span data-lang-inline="en" class="show">Converts screen light into natural light before it enters the eye</span><span data-lang-inline="ja">電子屏の光を眼に入る前に自然光に変換</span><span data-lang-inline="ko">화면 빛이 눈에 들어오기 전에 자연광으로 변환</span><span data-lang-inline="zh">在光线进入眼睛前，将电子屏有害光转换为自然光</span></li>
-          <li class="good-point"><span data-lang-inline="en" class="show">Reduces visual fatigue at the source — light stimulus level</span><span data-lang-inline="ja">光刺激レベルで視疲労を根本から軽減</span><span data-lang-inline="ko">광 자극 수준에서 시각 피로를 근원적으로 감소</span><span data-lang-inline="zh">在光刺激阶段即介入，从根源减少视疲劳</span></li>
+          <li class="good-point"><span data-lang-inline="en" class="show">Reduces visual fatigue at the source — the light stimulus level</span><span data-lang-inline="ja">光刺激レベルで視疲労を根本から軽減</span><span data-lang-inline="ko">광 자극 수준에서 시각 피로를 근원적으로 감소</span><span data-lang-inline="zh">在光刺激阶段即介入，从根源减少视疲劳</span></li>
           <li class="good-point"><span data-lang-inline="en" class="show">Preserves long-term vision health through daily wear</span><span data-lang-inline="ja">日常装着で長期的な視力健康を維持</span><span data-lang-inline="ko">일상 착용으로 장기적인 시력 건강 유지</span><span data-lang-inline="zh">日常佩戴，长期守护视力健康</span></li>
-          <li class="good-point"><span data-lang-inline="en" class="show">Nano biomimetic 15-layer structure — precision engineered</span><span data-lang-inline="ja">ナノ仿生15層構造で精密設計</span><span data-lang-inline="ko">나노 생체모방 15층 구조로 정밀 설계</span><span data-lang-inline="zh">纳米仿生15层精密结构，技术壁垒领先全球</span></li>
+          <li class="good-point"><span data-lang-inline="en" class="show">15-layer nano biomimetic structure — globally unmatched performance-to-price</span><span data-lang-inline="ja">15層ナノ仿生構造 — 世界に類を見ない性価比</span><span data-lang-inline="ko">15층 나노 생체모방 구조 — 세계 최고 가성비</span><span data-lang-inline="zh">15层纳米仿生结构——性价比全球独步</span></li>
         </ul>
       </div>
       <div class="pvt-item">
         <span class="pvt-badge old"><span data-lang-inline="en" class="show">Conventional Approach</span><span data-lang-inline="ja">従来のアプローチ</span><span data-lang-inline="ko">기존 방식</span><span data-lang-inline="zh">传统方案</span></span>
         <div class="pvt-title"><span data-lang-inline="en" class="show">React after the damage.</span><span data-lang-inline="ja">ダメージ後に対処。</span><span data-lang-inline="ko">손상 후에 대응.</span><span data-lang-inline="zh">损伤之后再应对。</span></div>
         <ul class="pvt-points">
-          <li><span data-lang-inline="en" class="show">Simple blue-light coating — filters only one wavelength</span><span data-lang-inline="ja">単純な抗ブルーライトコーティング — 一波長のみ対応</span><span data-lang-inline="ko">단순 블루라이트 코팅 — 하나의 파장만 필터링</span><span data-lang-inline="zh">单纯抗蓝光镀膜——仅针对单一波长</span></li>
+          <li><span data-lang-inline="en" class="show">Simple blue-light coating — filters only one wavelength</span><span data-lang-inline="ja">単純な抗ブルーライトコーティング</span><span data-lang-inline="ko">단순 블루라이트 코팅</span><span data-lang-inline="zh">单纯抗蓝光镀膜——仅针对单一波长</span></li>
           <li><span data-lang-inline="en" class="show">Treats symptoms without addressing root cause</span><span data-lang-inline="ja">根本原因を解決せず症状のみ対処</span><span data-lang-inline="ko">근본 원인 해결 없이 증상만 처리</span><span data-lang-inline="zh">只处理症状，不解决根本原因</span></li>
-          <li><span data-lang-inline="en" class="show">Glasses prescribed only after vision deteriorates</span><span data-lang-inline="ja">視力低下後にのみ眼鏡を処方</span><span data-lang-inline="ko">시력이 저하된 후에만 안경 처방</span><span data-lang-inline="zh">视力衰退后才配镜，为时已晚</span></li>
-          <li><span data-lang-inline="en" class="show">Cannot adapt to indoor + outdoor combined light stress</span><span data-lang-inline="ja">屋内外複合光ストレスに適応できない</span><span data-lang-inline="ko">실내외 복합 광 스트레스에 적응 불가</span><span data-lang-inline="zh">无法应对室内外复合光刺激伤害</span></li>
+          <li><span data-lang-inline="en" class="show">Glasses prescribed only after vision already deteriorates</span><span data-lang-inline="ja">視力低下後にのみ眼鏡を処方</span><span data-lang-inline="ko">시력이 저하된 후에만 안경 처방</span><span data-lang-inline="zh">视力衰退后才配镜，为时已晚</span></li>
+          <li><span data-lang-inline="en" class="show">Cannot adapt to combined indoor + outdoor light stress</span><span data-lang-inline="ja">屋内外複合光ストレスに適応できない</span><span data-lang-inline="ko">실내외 복합 광 스트레스에 적응 불가</span><span data-lang-inline="zh">无法应对室内外复合光刺激伤害</span></li>
         </ul>
       </div>
     </div>
-
     <div class="pain-grid">
-      <div class="pain-item">
-        <div class="pain-icon">👁️</div>
-        <div class="pain-title"><span data-lang-inline="en" class="show">Vision Gene Conflict</span><span data-lang-inline="ja">視覚遺伝子の衝突</span><span data-lang-inline="ko">시각 유전자 충돌</span><span data-lang-inline="zh">视觉基因冲突</span></div>
-        <div class="pain-desc"><span data-lang-inline="en" class="show">Human eyes evolved for natural light. Electronic screens — invented 40 years ago — produce a fundamentally different light that our visual DNA cannot adapt to.</span><span data-lang-inline="ja">人間の眼は自然光のために進化した。40年前に発明された電子スクリーンは、視覚DNAが適応できない全く異なる光を発する。</span><span data-lang-inline="ko">인간의 눈은 자연광에 적응해 진화했습니다. 40년 전 발명된 전자 화면은 시각 DNA가 적응할 수 없는 전혀 다른 빛을 냅니다.</span><span data-lang-inline="zh">人类眼睛进化于自然光环境。而40年前才出现的电子屏，产生的光与视觉DNA完全不兼容。</span></div>
-      </div>
-      <div class="pain-item">
-        <div class="pain-icon">📱</div>
-        <div class="pain-title"><span data-lang-inline="en" class="show">CVS Epidemic</span><span data-lang-inline="ja">CVS蔓延</span><span data-lang-inline="ko">CVS 만연</span><span data-lang-inline="zh">CVS蔓延</span></div>
-        <div class="pain-desc"><span data-lang-inline="en" class="show">Computer Vision Syndrome affects hundreds of millions. Post-2019, heavy phone users (4h+ daily) surged 2.5× — yet protection solutions remained unchanged.</span><span data-lang-inline="ja">コンピュータ視覚症候群は数億人に影響。2019年後、長時間スマホユーザーは2.5倍増加 — しかし保護手段は変わらなかった。</span><span data-lang-inline="ko">CVS는 수억 명에게 영향. 2019년 이후 장시간 스마트폰 사용자가 2.5배 증가했지만 보호 방법은 변하지 않았습니다.</span><span data-lang-inline="zh">计算机视觉综合征CVS已影响数亿人。2019年后，每日使用手机4小时以上的用户激增2.5倍，但防护方案却未能同步升级。</span></div>
-      </div>
-      <div class="pain-item">
-        <div class="pain-icon">🔬</div>
-        <div class="pain-title"><span data-lang-inline="en" class="show">The Solution</span><span data-lang-inline="ja">解決策</span><span data-lang-inline="ko">해결책</span><span data-lang-inline="zh">解决方案</span></div>
-        <div class="pain-desc"><span data-lang-inline="en" class="show">Biomimetic design that converts screen light properties — colour temperature, blue-light spectrum, near-distance imaging — into the equivalent of natural sunlight.</span><span data-lang-inline="ja">仿生設計で電子屏の光特性を自然光相当に変換 — 色温度、ブルーライトスペクトル、近距成像すべてを対応。</span><span data-lang-inline="ko">바이오미메틱 설계로 화면 광 특성을 자연광으로 변환 — 색 온도, 블루라이트 스펙트럼, 근거리 이미징 모두 대응.</span><span data-lang-inline="zh">仿生设计将电子屏光特性——色温、蓝光光谱、近距成像——全面转换为等效自然光状态。</span></div>
-      </div>
+      <div class="pain-item"><div class="pain-icon">👁️</div><div class="pain-title"><span data-lang-inline="en" class="show">Vision Gene Conflict</span><span data-lang-inline="ja">視覚遺伝子の衝突</span><span data-lang-inline="ko">시각 유전자 충돌</span><span data-lang-inline="zh">视觉基因冲突</span></div><div class="pain-desc"><span data-lang-inline="en" class="show">Human eyes evolved for natural light. Electronic screens — invented 40 years ago — produce fundamentally different light that our visual DNA cannot adapt to.</span><span data-lang-inline="ja">人間の眼は自然光のために進化した。40年前に発明された電子スクリーンは、視覚DNAが適応できない全く異なる光を発する。</span><span data-lang-inline="ko">인간의 눈은 자연광에 적응해 진화했습니다. 40년 전 발명된 전자 화면은 시각 DNA가 적응할 수 없는 전혀 다른 빛을 냅니다.</span><span data-lang-inline="zh">人类眼睛进化于自然光环境。而40年前才出现的电子屏，产生的光与视觉DNA完全不兼容。</span></div></div>
+      <div class="pain-item"><div class="pain-icon">📱</div><div class="pain-title"><span data-lang-inline="en" class="show">CVS Epidemic</span><span data-lang-inline="ja">CVS蔓延</span><span data-lang-inline="ko">CVS 만연</span><span data-lang-inline="zh">CVS蔓延</span></div><div class="pain-desc"><span data-lang-inline="en" class="show">Computer Vision Syndrome affects hundreds of millions. Post-2019, heavy phone users surged 2.5× — yet protection solutions remained unchanged.</span><span data-lang-inline="ja">コンピュータ視覚症候群は数億人に影響。2019年後、長時間スマホユーザーは2.5倍増加。</span><span data-lang-inline="ko">CVS는 수억 명에게 영향. 2019년 이후 장시간 스마트폰 사용자가 2.5배 증가.</span><span data-lang-inline="zh">计算机视觉综合征CVS已影响数亿人。2019年后长时间用手机用户激增2.5倍，但防护方案却未能同步升级。</span></div></div>
+      <div class="pain-item"><div class="pain-icon">🔬</div><div class="pain-title"><span data-lang-inline="en" class="show">The Solution</span><span data-lang-inline="ja">解決策</span><span data-lang-inline="ko">해결책</span><span data-lang-inline="zh">解决方案</span></div><div class="pain-desc"><span data-lang-inline="en" class="show">Biomimetic design converts screen light — colour temperature, blue-light spectrum, near-distance imaging — into the equivalent of natural sunlight.</span><span data-lang-inline="ja">仿生設計で電子屏の光特性を自然光相当に変換。色温度、ブルーライトスペクトル、近距成像すべてを対応。</span><span data-lang-inline="ko">바이오미메틱 설계로 화면 광 특성을 자연광으로 변환. 색온도, 블루라이트 스펙트럼, 근거리 이미징 모두 대응.</span><span data-lang-inline="zh">仿生设计将电子屏光特性——色温、蓝光光谱、近距成像——全面转换为等效自然光状态。</span></div></div>
     </div>
   </div>
 
-  <!-- TECHNOLOGY -->
   <div class="section">
     <p class="section-label"><span data-lang-inline="en" class="show">Technology</span><span data-lang-inline="ja">テクノロジー</span><span data-lang-inline="ko">기술</span><span data-lang-inline="zh">核心技术</span></p>
     <div class="features">
       <div class="feature-row">
         <div class="feature-text">
           <div class="feature-num">01</div>
-          <div class="feature-title"><span data-lang-inline="en" class="show">15-Layer Nano Biomimetic Film</span><span data-lang-inline="ja">15層ナノ仿生フィルム</span><span data-lang-inline="ko">15층 나노 생체모방 필름</span><span data-lang-inline="zh">15层纳米仿生薄膜</span></div>
-          <div class="feature-desc"><span data-lang-inline="en" class="show">Crystalline protein particle honeycomb structure. Three layers: corneal arc base, axial honeycomb diffusion, and dawn colour-temperature layer — converting direct light into diffused natural light at the nanoscale.</span><span data-lang-inline="ja">仿晶状体蛋白粒子蜂巣構造。眼球基弧層、軸向蜂巢柔曦層、晨光色温層の3層構成。直射光をナノスケールで漫射自然光に変換。</span><span data-lang-inline="ko">결정 단백질 입자 벌집 구조. 3층 구성: 안구 기저 호 층, 축향 벌집 확산 층, 새벽 색온도 층 — 직사광을 나노 수준에서 자연 산란광으로 변환.</span><span data-lang-inline="zh">仿晶状体蛋白粒子蜂巢结构。三层架构：眼球基弧层、轴向蜂巢柔曦层、晨光色温层——纳米尺度将直射光转换为漫射自然光。</span></div>
+          <div class="feature-title"><span data-lang-inline="en" class="show">Natural Light Conversion</span><span data-lang-inline="ja">自然光変換</span><span data-lang-inline="ko">자연광 변환</span><span data-lang-inline="zh">光转换原理</span></div>
+          <div class="feature-desc"><span data-lang-inline="en" class="show">Nano diffusion film intercepts electronic screen light and converts colour temperature, blue-light spectrum (420–490nm), and near-distance imaging into natural sunlight equivalent. The 防·理·护 three-stage process stops visual fatigue before it begins.</span><span data-lang-inline="ja">ナノ拡散フィルムが電子屏光を自然光相当に変換。防·理·護の3段階プロセスで視疲労を未然に防ぐ。</span><span data-lang-inline="ko">나노 확산 필름이 전자 화면 빛을 자연광으로 변환. 방·리·호 3단계 프로세스로 시각 피로를 사전에 차단.</span><span data-lang-inline="zh">纳米扩散薄膜将电子屏光转换为自然光——色温、蓝光光谱（420-490nm）、近距成像全面转化。防·理·护三阶段在视疲劳发生前将其阻断。</span></div>
         </div>
-        <div class="feature-img">
-          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" style="opacity:0.3"><rect x="4" y="9" width="28" height="3.5" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="4" y="15" width="28" height="3.5" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="4" y="21" width="28" height="3.5" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="4" y="27" width="28" height="3.5" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
-          <span><span data-lang-inline="en" class="show">Lens cross-section diagram</span><span data-lang-inline="ja">レンズ断面図</span><span data-lang-inline="ko">렌즈 단면도</span><span data-lang-inline="zh">镜片结构原理图</span></span>
-        </div>
+        <div class="feature-img"><img src="light-diagram.png" alt="Light conversion principle diagram"></div>
       </div>
       <div class="feature-row">
         <div class="feature-text">
           <div class="feature-num">02</div>
-          <div class="feature-title"><span data-lang-inline="en" class="show">AI Prescription Optimisation</span><span data-lang-inline="ja">AI処方最適化</span><span data-lang-inline="ko">AI 처방 최적화</span><span data-lang-inline="zh">AI验光优化配镜</span></div>
-          <div class="feature-desc"><span data-lang-inline="en" class="show">Input your optometry results. Our AI calibrates blue-light management (420–490nm), colour temperature, near-distance depth of field, and diffusion intensity — personalised to your exact vision profile.</span><span data-lang-inline="ja">検眼結果を入力。AIがブルーライト管理（420〜490nm）、色温度、近距離景深、拡散強度を個人の視力プロファイルに合わせて精密調整。</span><span data-lang-inline="ko">검안 결과 입력. AI가 블루라이트 관리(420~490nm), 색온도, 근거리 피사계 심도, 확산 강도를 개인 시력 프로파일에 맞게 정밀 조정.</span><span data-lang-inline="zh">输入验光数据，AI精准调校蓝光管理（420-490nm）、色温、近距景深、扩散强度——完全依据你的视力档案个性化定制。</span></div>
+          <div class="feature-title"><span data-lang-inline="en" class="show">15-Layer Nano Biomimetic Structure</span><span data-lang-inline="ja">15層ナノ仿生構造</span><span data-lang-inline="ko">15층 나노 생체모방 구조</span><span data-lang-inline="zh">15层纳米仿生结构</span></div>
+          <div class="feature-desc"><span data-lang-inline="en" class="show">Three-layer architecture mimicking crystalline protein particle honeycomb: corneal arc base layer, axial honeycomb soft-light layer, and dawn colour-temperature layer. 15 PVC nano film layers convert direct light into diffused natural light. Globally unmatched performance-to-price ratio.</span><span data-lang-inline="ja">仿晶状体蛋白粒子蜂巣構造を模倣した3層アーキテクチャ。15層PVCナノフィルムで直射光を漫射自然光に変換。性価比で世界独歩。</span><span data-lang-inline="ko">결정 단백질 입자 벌집 구조를 모방한 3층 아키텍처. 15층 PVC 나노 필름으로 직사광을 자연 산란광으로 변환. 세계 최고 가성비.</span><span data-lang-inline="zh">仿晶状体蛋白粒子蜂巢结构三层架构：眼球基弧层、轴向蜂巢柔曦层、晨光色温层。15层PVC纳米膜将直射光转换为漫射自然光。技术与性价比全球独步。</span></div>
         </div>
-        <div class="feature-img">
-          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" style="opacity:0.3"><path d="M6 18h4M26 18h4M18 6v4M18 26v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="18" cy="18" r="8" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="18" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
-          <span><span data-lang-inline="en" class="show">AI fitting interface</span><span data-lang-inline="ja">AI調整インターフェース</span><span data-lang-inline="ko">AI 피팅 인터페이스</span><span data-lang-inline="zh">AI配镜流程示意图</span></span>
-        </div>
+        <div class="feature-img"><img src="lens-layers.png" alt="Lens three-layer biomimetic structure"></div>
       </div>
       <div class="feature-row">
         <div class="feature-text">
           <div class="feature-num">03</div>
-          <div class="feature-title"><span data-lang-inline="en" class="show">AI Virtual Try-On</span><span data-lang-inline="ja">AIバーチャル試着</span><span data-lang-inline="ko">AI 가상 착용</span><span data-lang-inline="zh">AI虚拟试戴</span></div>
-          <div class="feature-desc"><span data-lang-inline="en" class="show">Upload your photo. See any frame on your face instantly. Available now on WeChat Mini Program — search <strong>「聆观睿智亮睛鲸」</strong>. Web version coming soon.</span><span data-lang-inline="ja">写真をアップロード。WeChatミニプログラム<strong>「聆观睿智亮睛鲸」</strong>で即座に試着。Web版は近日公開。</span><span data-lang-inline="ko">사진을 업로드하여 즉시 착용 모습 확인. WeChat <strong>「聆观睿智亮睛鲸」</strong>에서 지금 이용 가능. 웹 버전 곧 출시.</span><span data-lang-inline="zh">上传照片即刻查看上脸效果。微信搜索<strong>「聆观睿智亮睛鲸」</strong>立即体验，网页版即将上线。</span></div>
+          <div class="feature-title"><span data-lang-inline="en" class="show">AI Virtual Try-On & Prescription Fitting</span><span data-lang-inline="ja">AIバーチャル試着・処方フィッティング</span><span data-lang-inline="ko">AI 가상 착용 & 처방 피팅</span><span data-lang-inline="zh">AI虚拟试戴与验光配镜</span></div>
+          <div class="feature-desc"><span data-lang-inline="en" class="show">Upload your photo to try any frame instantly. Input your prescription and our AI calibrates every optical parameter for your exact vision profile. Available now on WeChat Mini Program — search <strong>「聆观睿智亮睛鲸」</strong>.</span><span data-lang-inline="ja">写真をアップロードして即座に試着。処方箋を入力するとAIが光学パラメータを精密調整。WeChat<strong>「聆观睿智亮睛鲸」</strong>にて利用可能。</span><span data-lang-inline="ko">사진을 업로드하여 즉시 착용 확인. 처방전을 입력하면 AI가 광학 파라미터를 정밀 조정. WeChat <strong>「聆观睿智亮睛鲸」</strong>에서 이용 가능.</span><span data-lang-inline="zh">上传照片即刻查看上脸效果；输入验光数据，AI精准调校每项光学参数。微信搜索<strong>「聆观睿智亮睛鲸」</strong>立即体验。</span></div>
         </div>
-        <div class="feature-img">
-          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" style="opacity:0.3"><circle cx="18" cy="13" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M6 30c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          <span><span data-lang-inline="en" class="show">AI try-on screenshot</span><span data-lang-inline="ja">試着スクリーンショット</span><span data-lang-inline="ko">AI 착용 스크린샷</span><span data-lang-inline="zh">AI试戴界面截图</span></span>
+        <div class="feature-img" style="flex-direction:column;gap:10px">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" style="opacity:0.2"><circle cx="24" cy="18" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M8 40c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span style="font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text3)"><span data-lang-inline="en" class="show">AI try-on screenshot</span><span data-lang-inline="zh">AI试戴界面截图</span></span>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- STATS + AWARDS -->
   <div class="section">
     <p class="section-label"><span data-lang-inline="en" class="show">Credentials</span><span data-lang-inline="ja">実績</span><span data-lang-inline="ko">자격 인증</span><span data-lang-inline="zh">资质荣誉</span></p>
     <div class="stats">
-      <div class="stat"><div class="stat-num">15</div><div class="stat-label"><span data-lang-inline="en" class="show">Nano film layers</span><span data-lang-inline="ja">ナノ膜層</span><span data-lang-inline="ko">나노 필름 레이어</span><span data-lang-inline="zh">层纳米薄膜</span></div></div>
-      <div class="stat"><div class="stat-num">5-in-1</div><div class="stat-label"><span data-lang-inline="en" class="show">Protection mechanisms</span><span data-lang-inline="ja">保護メカニズム</span><span data-lang-inline="ko">보호 메커니즘</span><span data-lang-inline="zh">五维防护机制</span></div></div>
-      <div class="stat"><div class="stat-num">NOTC</div><div class="stat-label"><span data-lang-inline="en" class="show">National certified</span><span data-lang-inline="ja">国家認証</span><span data-lang-inline="ko">국가 인증</span><span data-lang-inline="zh">国家质检认证</span></div></div>
-      <div class="stat"><div class="stat-num">2×</div><div class="stat-label"><span data-lang-inline="en" class="show">Award winner 2025</span><span data-lang-inline="ja">2025年受賞</span><span data-lang-inline="ko">2025년 수상</span><span data-lang-inline="zh">2025双奖得主</span></div></div>
+      <div class="stat"><div class="stat-num">15</div><div class="stat-label"><span data-lang-inline="en" class="show">Nano film layers</span><span data-lang-inline="zh">层纳米薄膜</span></div></div>
+      <div class="stat"><div class="stat-num">5-in-1</div><div class="stat-label"><span data-lang-inline="en" class="show">Protection mechanisms</span><span data-lang-inline="zh">五维防护机制</span></div></div>
+      <div class="stat"><div class="stat-num">NOTC</div><div class="stat-label"><span data-lang-inline="en" class="show">National certified</span><span data-lang-inline="zh">国家质检认证</span></div></div>
+      <div class="stat"><div class="stat-num">2×</div><div class="stat-label"><span data-lang-inline="en" class="show">Award winner 2025</span><span data-lang-inline="zh">2025双奖得主</span></div></div>
     </div>
     <div class="awards-grid">
       <div class="award-item">
-        <div class="award-icon">🏆</div>
-        <div>
-          <div class="award-title"><span data-lang-inline="en" class="show">Cross-Strait Startup Star</span><span data-lang-inline="ja">海峡創業之星</span><span data-lang-inline="ko">해협 창업 스타</span><span data-lang-inline="zh">海峡创业之星奖</span></div>
-          <div class="award-desc"><span data-lang-inline="en" class="show">1st Cross-Strait Youth Innovation & Entrepreneurship Competition, 2025 · Chongqing</span><span data-lang-inline="ja">第1回海峡両岸青年創新創業大賽 2025・重慶</span><span data-lang-inline="ko">제1회 해협 양안 청년 혁신 창업 대회 2025 · 충칭</span><span data-lang-inline="zh">首届重庆海峡两岸青年创新创业大赛 2025 · 重庆</span></div>
-        </div>
+        <img class="award-img" src="honor.png" alt="Award ceremony">
+        <div class="award-content"><div class="award-title">🏆 <span data-lang-inline="en" class="show">Cross-Strait Startup Future Star · 2025</span><span data-lang-inline="ja">海峡創業未来之星 · 2025</span><span data-lang-inline="ko">해협 창업 미래 스타 · 2025</span><span data-lang-inline="zh">海峡创业未来之星奖 · 2025</span></div><div class="award-desc"><span data-lang-inline="en" class="show">1st Cross-Strait Youth Innovation & Entrepreneurship Competition · Chongqing</span><span data-lang-inline="zh">首届重庆海峡两岸青年创新创业大赛 · 重庆</span></div></div>
       </div>
       <div class="award-item">
-        <div class="award-icon">⭐</div>
-        <div>
-          <div class="award-title"><span data-lang-inline="en" class="show">Sci-Tech Exploration Star</span><span data-lang-inline="ja">科創探索之星</span><span data-lang-inline="ko">과학기술 탐색 스타</span><span data-lang-inline="zh">科创探索之星奖</span></div>
-          <div class="award-desc"><span data-lang-inline="en" class="show">Chongqing Yidu Innovation Competition · Chengdu-Chongqing Twin Cities Economic Circle</span><span data-lang-inline="ja">重慶義渡賽創会・成渝双城経済圏</span><span data-lang-inline="ko">충칭 이두 혁신 대회 · 청두-충칭 트윈 시티 경제권</span><span data-lang-inline="zh">重庆义渡赛创会 · 成渝双城经济圈科创探索之星</span></div>
-        </div>
+        <img class="award-img" src="honor.png" alt="Sci-tech award">
+        <div class="award-content"><div class="award-title">⭐ <span data-lang-inline="en" class="show">Sci-Tech Exploration Star · 2025</span><span data-lang-inline="ja">科創探索之星 · 2025</span><span data-lang-inline="ko">과학기술 탐색 스타 · 2025</span><span data-lang-inline="zh">科创探索之星奖 · 2025</span></div><div class="award-desc"><span data-lang-inline="en" class="show">Chongqing Yidu Innovation Competition · Chengdu-Chongqing Twin Cities Economic Circle</span><span data-lang-inline="zh">重庆义渡赛创会 · 成渝双城经济圈</span></div></div>
       </div>
     </div>
   </div>
 
-  <!-- REVIEWS -->
   <div class="section">
     <p class="section-label"><span data-lang-inline="en" class="show">Customer Voices</span><span data-lang-inline="ja">お客様の声</span><span data-lang-inline="ko">고객 후기</span><span data-lang-inline="zh">用户评价</span></p>
     <div class="reviews">
-      <div class="review"><div class="stars">★★★★★</div><p class="review-text"><span data-lang-inline="en" class="show">"Finally glasses I can wear all day without headaches. The difference from regular anti-blue-light lenses is remarkable."</span><span data-lang-inline="ja">「頭痛なしで一日中かけられる眼鏡がやっと。一般の抗ブルーライトレンズとの違いが際立っている。」</span><span data-lang-inline="ko">"하루 종일 써도 두통이 없는 안경을 드디어 찾았어요. 일반 블루라이트 차단 렌즈와의 차이가 놀랍습니다."</span><span data-lang-inline="zh">「终于找到戴一整天也不头疼的眼镜了。与普通防蓝光镜片的差异非常明显。」</span></p><div class="review-name">— Sarah K., Tokyo</div></div>
-      <div class="review"><div class="stars">★★★★★</div><p class="review-text"><span data-lang-inline="en" class="show">"Using screens 10+ hours daily for work. Since switching to Revue, eye strain reduced dramatically. The science behind it makes sense."</span><span data-lang-inline="ja">「仕事で毎日10時間以上スクリーンを使用。Revueに切り替えてから眼精疲労が劇的に減少。背景にある科学が納得できる。」</span><span data-lang-inline="ko">"업무로 하루 10시간 이상 화면 사용. Revue로 바꾼 후 눈 피로가 크게 줄었습니다. 과학적 원리가 이해됩니다."</span><span data-lang-inline="zh">「工作需要每天使用屏幕10小时以上。换用Revue之后，眼睛疲劳感显著减少。背后的科学原理让人信服。」</span></p><div class="review-name">— Marcus L., Seoul</div></div>
-      <div class="review"><div class="stars">★★★★★</div><p class="review-text"><span data-lang-inline="en" class="show">"My dry eyes and light sensitivity improved noticeably. These aren't just sunglasses — they're engineered protection."</span><span data-lang-inline="ja">「ドライアイと光過敏が明らかに改善。ただのサングラスではなく、設計された保護だ。」</span><span data-lang-inline="ko">"안구건조증과 빛 민감도가 눈에 띄게 개선되었습니다. 단순한 선글라스가 아닌 설계된 보호입니다."</span><span data-lang-inline="zh">「干眼和畏光症状明显改善。这不只是眼镜，而是经过工程设计的防护系统。」</span></p><div class="review-name">— Nina W., Berlin</div></div>
+      <div class="review"><div class="stars">★★★★★</div><p class="review-text"><span data-lang-inline="en" class="show">"Finally glasses I can wear all day without headaches. The difference from regular anti-blue-light lenses is remarkable."</span><span data-lang-inline="ja">「頭痛なしで一日中かけられる眼鏡がやっと。一般の抗ブルーライトレンズとの違いが際立っている。」</span><span data-lang-inline="ko">"하루 종일 써도 두통이 없는 안경을 드디어 찾았어요."</span><span data-lang-inline="zh">「终于找到戴一整天也不头疼的眼镜了。与普通防蓝光镜片的差异非常明显。」</span></p><div class="review-name">— Sarah K., Tokyo</div></div>
+      <div class="review"><div class="stars">★★★★★</div><p class="review-text"><span data-lang-inline="en" class="show">"Using screens 10+ hours daily for work. Since switching to Revue, eye strain reduced dramatically."</span><span data-lang-inline="ja">「仕事で毎日10時間以上スクリーンを使用。Revueに切り替えてから眼精疲労が劇的に減少。」</span><span data-lang-inline="ko">"업무로 하루 10시간 이상 화면 사용. Revue로 바꾼 후 눈 피로가 크게 줄었습니다."</span><span data-lang-inline="zh">「工作需要每天使用屏幕10小时以上。换用Revue之后，眼睛疲劳感显著减少。」</span></p><div class="review-name">— Marcus L., Seoul</div></div>
+      <div class="review"><div class="stars">★★★★★</div><p class="review-text"><span data-lang-inline="en" class="show">"My dry eyes and light sensitivity improved noticeably. These aren't just sunglasses — they're engineered protection."</span><span data-lang-inline="ja">「ドライアイと光過敏が明らかに改善。ただのサングラスではなく、設計された保護だ。」</span><span data-lang-inline="ko">"안구건조증과 빛 민감도가 눈에 띄게 개선되었습니다."</span><span data-lang-inline="zh">「干眼和畏光症状明显改善。这不只是眼镜，而是经过工程设计的防护系统。」</span></p><div class="review-name">— Nina W., Berlin</div></div>
     </div>
   </div>
 
@@ -431,20 +344,17 @@ footer{border-top:0.5px solid var(--border);padding:24px 48px;display:flex;justi
   </div>
 
   <footer>
-    <div>
-      <div class="footer-logo">Revue · 聆观睿智</div>
-      <div class="footer-sub">重庆朝目聆观科技有限公司 · Chongqing Chaomù Lingguan Technology Co., Ltd.</div>
-    </div>
+    <div><div class="footer-logo">Revue · 聆观睿智</div><div class="footer-sub">重庆朝目聆观科技有限公司 · Chongqing Chaomù Lingguan Technology Co., Ltd.</div></div>
     <div class="footer-links">
-      <button class="footer-link" onclick="goPage('shop')"><span data-lang-inline="en" class="show">Shop</span><span data-lang-inline="ja">ショップ</span><span data-lang-inline="ko">쇼핑</span><span data-lang-inline="zh">选购</span></button>
-      <button class="footer-link" onclick="goPage('about')"><span data-lang-inline="en" class="show">About</span><span data-lang-inline="ja">会社概要</span><span data-lang-inline="ko">소개</span><span data-lang-inline="zh">关于我们</span></button>
-      <button class="footer-link" onclick="goPage('contact')"><span data-lang-inline="en" class="show">Contact</span><span data-lang-inline="ja">お問い合わせ</span><span data-lang-inline="ko">문의</span><span data-lang-inline="zh">联系我们</span></button>
+      <button class="footer-link" onclick="goPage('shop')"><span data-lang-inline="en" class="show">Shop</span><span data-lang-inline="zh">选购</span></button>
+      <button class="footer-link" onclick="goPage('about')"><span data-lang-inline="en" class="show">About</span><span data-lang-inline="zh">关于我们</span></button>
+      <button class="footer-link" onclick="goPage('contact')"><span data-lang-inline="en" class="show">Contact</span><span data-lang-inline="zh">联系我们</span></button>
     </div>
   </footer>
 </div>
 
 
-<!-- ══════════════════ PAGE: SHOP ══════════════════ -->
+<!-- ══════════════════ SHOP ══════════════════ -->
 <div class="page" id="page-shop">
   <nav>
     <button class="logo" onclick="goHome()">Revue<span class="logo-sub">聆观睿智</span></button>
@@ -460,140 +370,103 @@ footer{border-top:0.5px solid var(--border);padding:24px 48px;display:flex;justi
       <button class="lang-btn" onclick="setLang('zh',this)">中文</button>
     </div>
   </nav>
-
   <div class="subpage-hero">
     <button class="subpage-back" onclick="goHome()">← <span data-lang-inline="en" class="show">Back</span><span data-lang-inline="ja">戻る</span><span data-lang-inline="ko">뒤로</span><span data-lang-inline="zh">返回</span></button>
     <h1 class="subpage-title"><span data-lang-inline="en" class="show">The Collection</span><span data-lang-inline="ja">コレクション</span><span data-lang-inline="ko">컬렉션</span><span data-lang-inline="zh">产品系列</span></h1>
-    <p class="subpage-sub"><span data-lang-inline="en" class="show">Every lens in the Revue collection uses our proprietary 15-layer nano biomimetic technology — protecting your vision before damage occurs. All frames support AI prescription optimisation and virtual try-on via WeChat.</span><span data-lang-inline="ja">Revueのすべてのレンズは独自の15層ナノ仿生技術を採用 — ダメージが起きる前に視力を守ります。全フレームはAI処方最適化とWeChat試着に対応。</span><span data-lang-inline="ko">Revue 컬렉션의 모든 렌즈는 독점 15층 나노 생체모방 기술을 사용합니다 — 손상 전에 시력을 보호합니다. 모든 프레임은 AI 처방 최적화 및 WeChat 가상 착용을 지원합니다.</span><span data-lang-inline="zh">Revue系列所有镜片均采用独家15层纳米仿生技术——在损伤发生之前守护你的视力。所有镜框均支持AI验光优化与微信虚拟试戴。</span></p>
+    <p class="subpage-sub"><span data-lang-inline="en" class="show">Every lens uses our proprietary 15-layer nano biomimetic technology — protecting before damage occurs. All frames support AI prescription optimisation and virtual try-on via WeChat.</span><span data-lang-inline="ja">すべてのレンズは独自の15層ナノ仿生技術を採用。全フレームはAI処方最適化とWeChat試着に対応。</span><span data-lang-inline="ko">모든 렌즈는 독점 15층 나노 생체모방 기술을 사용합니다. 모든 프레임은 AI 처방 최적화 및 WeChat 가상 착용을 지원합니다.</span><span data-lang-inline="zh">Revue系列所有镜片均采用独家15层纳米仿生技术——在损伤发生之前守护视力。所有镜框均支持AI验光优化与微信虚拟试戴。</span></p>
   </div>
-
   <div class="subpage-body">
-
-    <!-- RX SERVICE BANNER -->
     <div class="rx-banner">
       <div>
         <div class="rx-banner-title">✦ <span data-lang-inline="en" class="show">Comfortable Prescription Optimisation Service — AI Rx</span><span data-lang-inline="ja">快適処方最適化サービス — AI Rx</span><span data-lang-inline="ko">편안한 처방 최적화 서비스 — AI Rx</span><span data-lang-inline="zh">舒适配镜验光优化服务 — AI Rx</span></div>
-        <div class="rx-banner-desc"><span data-lang-inline="en" class="show">Input your existing prescription and our AI calibrates every optical parameter — blue-light balance, colour temperature, near-distance depth of field — so your lenses work with your eyes, not against them. Included with every Revue purchase.</span><span data-lang-inline="ja">現在の処方箋を入力するだけで、AIがブルーライトバランス、色温度、近距景深などあらゆる光学パラメータを調整 — レンズがあなたの眼と協調して働きます。全製品に含まれています。</span><span data-lang-inline="ko">기존 처방전을 입력하면 AI가 블루라이트 균형, 색온도, 근거리 피사계 심도 등 모든 광학 매개변수를 조정합니다 — 렌즈가 눈과 함께 작동합니다. 모든 구매에 포함.</span><span data-lang-inline="zh">输入你现有的验光数据，AI调校蓝光平衡、色温、近距景深等每项光学参数——让镜片顺应你的眼睛，而非与之对抗。所有购买均包含此服务。</span></div>
+        <div class="rx-banner-desc"><span data-lang-inline="en" class="show">Input your prescription and our AI calibrates blue-light balance, colour temperature, near-distance depth of field — so your lenses work with your eyes, not against them. Included with every Revue purchase.</span><span data-lang-inline="ja">処方箋を入力するだけで、AIがブルーライトバランス、色温度、近距景深を調整。全製品に含まれています。</span><span data-lang-inline="ko">처방전을 입력하면 AI가 블루라이트 균형, 색온도, 근거리 피사계 심도를 조정합니다. 모든 구매에 포함.</span><span data-lang-inline="zh">输入验光数据，AI调校蓝光平衡、色温、近距景深——让镜片顺应你的眼睛。所有购买均包含此服务。</span></div>
       </div>
       <button class="btn-amber" onclick="showTryOnModal()"><span data-lang-inline="en" class="show">Learn More</span><span data-lang-inline="ja">詳細を見る</span><span data-lang-inline="ko">자세히 보기</span><span data-lang-inline="zh">了解更多</span></button>
     </div>
 
-    <!-- PRODUCTS -->
     <p class="section-label" style="margin-bottom:20px"><span data-lang-inline="en" class="show">All Products</span><span data-lang-inline="ja">全製品</span><span data-lang-inline="ko">전체 제품</span><span data-lang-inline="zh">全部产品</span></p>
     <div class="product-grid">
 
-      <!-- 1: 睿智电脑手机护目镜 -->
+      <!-- 1: 电脑手机护目镜 -->
       <div class="product-card">
-        <div class="product-img">
-          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" style="opacity:0.25"><rect x="4" y="16" width="16" height="11" rx="5" stroke="currentColor" stroke-width="1.5"/><rect x="24" y="16" width="16" height="11" rx="5" stroke="currentColor" stroke-width="1.5"/><path d="M20 21.5h4" stroke="currentColor" stroke-width="1.5"/></svg>
-          <span><span data-lang-inline="en" class="show">Product photo</span><span data-lang-inline="zh">产品图</span></span>
-        </div>
+        <div class="product-img-box"><img src="product-screen.png" alt="Rui Zhi Screen Guard"></div>
         <div class="product-info">
           <div class="product-series"><span data-lang-inline="en" class="show">Indoor · Screen Protection</span><span data-lang-inline="ja">室内・スクリーン保護</span><span data-lang-inline="ko">실내 · 화면 보호</span><span data-lang-inline="zh">室内 · 屏幕防护</span></div>
           <div class="product-name"><span data-lang-inline="en" class="show">Rui Zhi Screen Guard</span><span data-lang-inline="ja">睿智スクリーンガード</span><span data-lang-inline="ko">루이즈 화면 보호</span><span data-lang-inline="zh">睿智电脑手机护目镜</span></div>
-          <div class="product-tags">
-            <span class="product-tag featured"><span data-lang-inline="en" class="show">Bestseller</span><span data-lang-inline="zh">热销</span></span>
-            <span class="product-tag"><span data-lang-inline="en" class="show">Indoor + Outdoor</span><span data-lang-inline="zh">室内外</span></span>
-            <span class="product-tag"><span data-lang-inline="en" class="show">Anti-fatigue</span><span data-lang-inline="zh">抗疲劳</span></span>
-          </div>
-          <div class="product-desc"><span data-lang-inline="en" class="show">Designed for heavy screen users. Manages blue-light, reduces CVS fatigue, photochromic alert at dangerous UV levels. Ideal for long work sessions, streaming, and gaming.</span><span data-lang-inline="ja">長時間スクリーンユーザー向け。ブルーライト管理、CVS疲労軽減、危険なUVレベルで光変化アラート。長時間作業、動画視聴、ゲームに最適。</span><span data-lang-inline="ko">장시간 화면 사용자를 위해 설계. 블루라이트 관리, CVS 피로 감소, 위험한 UV 수준에서 광변색 알림. 장시간 작업, 스트리밍, 게임에 이상적.</span><span data-lang-inline="zh">专为长时间使用屏幕的用户设计。蓝光管理、减少CVS视疲劳、危险紫外线强度时光变提示。适合长时间办公、追剧、游戏视力保护。</span></div>
+          <div class="product-tags"><span class="product-tag featured"><span data-lang-inline="en" class="show">Bestseller</span><span data-lang-inline="zh">热销</span></span><span class="product-tag"><span data-lang-inline="en" class="show">Anti-fatigue</span><span data-lang-inline="zh">抗疲劳</span></span><span class="product-tag"><span data-lang-inline="en" class="show">Photochromic</span><span data-lang-inline="zh">光变提示</span></span></div>
+          <div class="product-desc"><span data-lang-inline="en" class="show">For heavy screen users. Blue-light management, CVS fatigue reduction, photochromic alert at dangerous UV levels. Ideal for long work sessions, streaming, and gaming.</span><span data-lang-inline="ja">長時間スクリーンユーザー向け。ブルーライト管理、CVS疲労軽減。長時間作業、動画視聴、ゲームに最適。</span><span data-lang-inline="ko">장시간 화면 사용자를 위해 설계. 블루라이트 관리, CVS 피로 감소. 장시간 작업, 스트리밍, 게임에 이상적.</span><span data-lang-inline="zh">专为长时间使用屏幕的用户设计。蓝光管理、减少CVS视疲劳、危险紫外线强度时光变提示。适合长时间办公、追剧、游戏视力保护。</span></div>
           <div class="product-price"><span data-lang-inline="en" class="show">From</span><span data-lang-inline="zh">起售价</span> $[Price]</div>
         </div>
       </div>
 
       <!-- 2: 畏光超规护目镜 -->
       <div class="product-card">
-        <div class="product-img amber-tint">
-          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" style="opacity:0.25"><circle cx="22" cy="22" r="14" stroke="currentColor" stroke-width="1.5"/><path d="M22 8v4M22 32v4M8 22h4M32 22h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="22" cy="22" r="6" stroke="currentColor" stroke-width="1.5"/></svg>
-          <span><span data-lang-inline="en" class="show">Product photo</span><span data-lang-inline="zh">产品图</span></span>
-        </div>
+        <div class="product-img-box"><img src="product-photophobia.png" alt="Photophobia Shield Pro"></div>
         <div class="product-info">
           <div class="product-series"><span data-lang-inline="en" class="show">Outdoor · Maximum Shield</span><span data-lang-inline="ja">屋外・最大シールド</span><span data-lang-inline="ko">야외 · 최대 차폐</span><span data-lang-inline="zh">户外 · 畏光超规防护</span></div>
           <div class="product-name"><span data-lang-inline="en" class="show">Photophobia Shield Pro</span><span data-lang-inline="ja">畏光シールドプロ</span><span data-lang-inline="ko">광과민 실드 프로</span><span data-lang-inline="zh">畏光超规护目镜</span></div>
-          <div class="product-tags">
-            <span class="product-tag featured"><span data-lang-inline="en" class="show">UV Max</span><span data-lang-inline="zh">最强紫外线防护</span></span>
-            <span class="product-tag"><span data-lang-inline="en" class="show">Glare Shield</span><span data-lang-inline="zh">超规防眩光</span></span>
-            <span class="product-tag"><span data-lang-inline="en" class="show">Coverage Frame</span><span data-lang-inline="zh">包覆框</span></span>
-          </div>
-          <div class="product-desc"><span data-lang-inline="en" class="show">For high-UV, high-glare environments. Anti-glare without polarisation — so you can still read phone screens and see through windshields without rainbow distortion. Superior to conventional tinted lenses.</span><span data-lang-inline="ja">高UV・高眩しさ環境向け。偏光なし防眩 — スマホ画面の読み取り、フロントガラスの視界も彩虹歪みなし。一般染色レンズより優れた眩しさ対策。</span><span data-lang-inline="ko">고UV, 고눈부심 환경을 위한. 편광 없는 눈부심 방지 — 핸드폰 화면을 읽고 무지개 왜곡 없이 앞유리를 볼 수 있습니다. 일반 착색 렌즈보다 우수합니다.</span><span data-lang-inline="zh">专为高紫外线与强眩光环境设计。无偏光防眩——依然可以正常使用手机屏幕，观看挡风玻璃不产生彩虹纹。防眩光效果优于单纯染色片。</span></div>
+          <div class="product-tags"><span class="product-tag featured"><span data-lang-inline="en" class="show">UV Max</span><span data-lang-inline="zh">最强UV防护</span></span><span class="product-tag"><span data-lang-inline="en" class="show">Glare Shield</span><span data-lang-inline="zh">超规防眩光</span></span><span class="product-tag"><span data-lang-inline="en" class="show">Coverage Frame</span><span data-lang-inline="zh">包覆框</span></span></div>
+          <div class="product-desc"><span data-lang-inline="en" class="show">For high-UV, high-glare environments. Anti-glare without polarisation — so you can still read phone screens and see through windshields without rainbow distortion. Superior to conventional tinted lenses.</span><span data-lang-inline="ja">高UV・高眩しさ環境向け。偏光なし防眩。スマホ画面の読み取り、フロントガラスの視界も彩虹歪みなし。</span><span data-lang-inline="ko">고UV, 고눈부심 환경을 위한. 편광 없는 눈부심 방지. 핸드폰 화면을 읽고 무지개 왜곡 없이 앞유리를 볼 수 있습니다.</span><span data-lang-inline="zh">专为高紫外线与强眩光环境设计。无偏光防眩——依然可以正常使用手机屏幕，观看挡风玻璃不产生彩虹纹。防眩光效果优于单纯染色片。</span></div>
           <div class="product-price"><span data-lang-inline="en" class="show">From</span><span data-lang-inline="zh">起售价</span> $[Price]</div>
         </div>
       </div>
 
       <!-- 3: 运动护目镜 -->
       <div class="product-card">
-        <div class="product-img">
-          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" style="opacity:0.25"><path d="M6 22c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><rect x="10" y="20" width="10" height="8" rx="3" stroke="currentColor" stroke-width="1.5"/><rect x="24" y="20" width="10" height="8" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M20 24h4" stroke="currentColor" stroke-width="1.5"/></svg>
-          <span><span data-lang-inline="en" class="show">Product photo</span><span data-lang-inline="zh">产品图</span></span>
-        </div>
+        <div class="product-img-box"><img src="product-sport.png" alt="Sport Vision Pro"></div>
         <div class="product-info">
           <div class="product-series"><span data-lang-inline="en" class="show">Sport · High Contrast</span><span data-lang-inline="ja">スポーツ・ハイコントラスト</span><span data-lang-inline="ko">스포츠 · 고대비</span><span data-lang-inline="zh">运动 · 高对比</span></div>
           <div class="product-name"><span data-lang-inline="en" class="show">Sport Vision Pro</span><span data-lang-inline="ja">スポーツビジョンプロ</span><span data-lang-inline="ko">스포츠 비전 프로</span><span data-lang-inline="zh">运动护目镜</span></div>
-          <div class="product-tags">
-            <span class="product-tag featured"><span data-lang-inline="en" class="show">Impact Resist</span><span data-lang-inline="zh">抗冲击</span></span>
-            <span class="product-tag"><span data-lang-inline="en" class="show">PC / MR-8</span><span data-lang-inline="zh">PC / MR-8</span></span>
-            <span class="product-tag"><span data-lang-inline="en" class="show">High Contrast</span><span data-lang-inline="zh">高对比度</span></span>
-          </div>
-          <div class="product-desc"><span data-lang-inline="en" class="show">PC and MR-8 impact-resistant lenses. Enhances contour and boundary clarity — visibly sharpens vision for precision sports. Ideal for golf, baseball, table tennis, cycling, and e-sports.</span><span data-lang-inline="ja">PC・MR-8耐衝撃レンズ。輪郭と境界の明瞭度を向上 — 精密スポーツで視覚を明確に向上。ゴルフ、野球、卓球、サイクリング、eスポーツに最適。</span><span data-lang-inline="ko">PC 및 MR-8 충격 방지 렌즈. 윤곽 및 경계 선명도 향상 — 정밀 스포츠에서 시각을 눈에 띄게 향상. 골프, 야구, 탁구, 사이클링, e스포츠에 이상적.</span><span data-lang-inline="zh">PC与MR-8抗冲击镜片。增强轮廓与边界清晰度，有效提升精密运动视觉。适合高尔夫、棒球、乒乓、骑行、电竞等运动场景。</span></div>
+          <div class="product-tags"><span class="product-tag featured"><span data-lang-inline="en" class="show">Impact Resist</span><span data-lang-inline="zh">抗冲击</span></span><span class="product-tag">PC / MR-8</span><span class="product-tag"><span data-lang-inline="en" class="show">High Contrast</span><span data-lang-inline="zh">高对比度</span></span></div>
+          <div class="product-desc"><span data-lang-inline="en" class="show">PC and MR-8 impact-resistant lenses. Enhances contour and boundary clarity — ideal for golf, baseball, table tennis, cycling, fishing, shooting, and e-sports.</span><span data-lang-inline="ja">PC・MR-8耐衝撃レンズ。輪郭と境界の明瞭度を向上。ゴルフ、野球、卓球、サイクリング、eスポーツに最適。</span><span data-lang-inline="ko">PC 및 MR-8 충격 방지 렌즈. 윤곽 및 경계 선명도 향상. 골프, 야구, 탁구, 사이클링, e스포츠에 이상적.</span><span data-lang-inline="zh">PC与MR-8抗冲击镜片。增强轮廓与边界清晰度。适合高尔夫、棒球、乒乓、骑行、钓鱼、射击、电竞等运动场景。</span></div>
           <div class="product-price"><span data-lang-inline="en" class="show">From</span><span data-lang-inline="zh">起售价</span> $[Price]</div>
         </div>
       </div>
 
       <!-- 4: 衰老性畏光眼镜 -->
       <div class="product-card">
-        <div class="product-img amber-tint">
-          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" style="opacity:0.25"><path d="M22 8c-7.732 0-14 6.268-14 14s6.268 14 14 14 14-6.268 14-14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M22 14v8l5 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="22" cy="22" r="3" fill="currentColor" opacity="0.4"/></svg>
-          <span><span data-lang-inline="en" class="show">Product photo</span><span data-lang-inline="zh">产品图</span></span>
+        <div class="product-img-box" style="background:linear-gradient(135deg,var(--bg2),var(--amber-bg))">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" style="opacity:0.2"><path d="M24 10c-7.732 0-14 6.268-14 14s6.268 14 14 14 14-6.268 14-14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M24 18v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="product-info">
           <div class="product-series"><span data-lang-inline="en" class="show">Age-Related · Vision Preservation</span><span data-lang-inline="ja">加齢対応・視力維持</span><span data-lang-inline="ko">노화 관련 · 시력 보존</span><span data-lang-inline="zh">年龄相关 · 视力保护</span></div>
-          <div class="product-name"><span data-lang-inline="en" class="show">SeniorShield — Anti-Photophobia</span><span data-lang-inline="ja">シニアシールド — 畏光対策</span><span data-lang-inline="ko">시니어 실드 — 광과민 완화</span><span data-lang-inline="zh">衰老性畏光护目镜</span></div>
-          <div class="product-tags">
-            <span class="product-tag featured"><span data-lang-inline="en" class="show">New</span><span data-lang-inline="zh">新品</span></span>
-            <span class="product-tag"><span data-lang-inline="en" class="show">Anti-Photophobia</span><span data-lang-inline="zh">畏光防护</span></span>
-            <span class="product-tag"><span data-lang-inline="en" class="show">Dry Eye Relief</span><span data-lang-inline="zh">干眼缓解</span></span>
-            <span class="product-tag"><span data-lang-inline="en" class="show">45+ Age Group</span><span data-lang-inline="zh">45岁以上</span></span>
-          </div>
-          <div class="product-desc"><span data-lang-inline="en" class="show">Specifically engineered for age-related photophobia and dry eye. As eyes age, retinal sensitivity changes and screen-light tolerance decreases. This lens manages dawn colour temperature and diffusion intensity to create a gentler, more tolerable visual environment — reducing squinting, tearing, and fatigue without over-darkening.</span><span data-lang-inline="ja">加齢性の畏光とドライアイに特化して設計。眼の加齢による網膜感受性の変化とスクリーン光耐性の低下に対応。晨光色温と拡散強度を管理し、過度に暗くせず、より穏やかで快適な視覚環境を実現 — 目を細める、涙目、疲労を軽減。</span><span data-lang-inline="ko">노화 관련 광과민증 및 안구건조증을 위해 특별히 설계. 눈의 노화로 인한 망막 감도 변화와 화면 빛 내성 감소에 대응. 새벽 색온도와 확산 강도를 관리하여 더 부드럽고 편안한 시각 환경 제공 — 과도하게 어둡게 하지 않으면서 눈 찡그림, 눈물, 피로 감소.</span><span data-lang-inline="zh">专为衰老性畏光与干眼而设计。随年龄增长，视网膜敏感度改变，对电子屏光刺激的耐受性下降。本款镜片通过调控晨光色温与扩散强度，构建更柔和、更易耐受的视觉环境——减少眯眼、流泪与疲劳，不过度遮光。适合45岁以上长期使用电子设备人群。</span></div>
+          <div class="product-name"><span data-lang-inline="en" class="show">SeniorShield</span><span data-lang-inline="ja">シニアシールド</span><span data-lang-inline="ko">시니어 실드</span><span data-lang-inline="zh">衰老性畏光护目镜</span></div>
+          <div class="product-tags"><span class="product-tag featured"><span data-lang-inline="en" class="show">New</span><span data-lang-inline="zh">新品</span></span><span class="product-tag"><span data-lang-inline="en" class="show">Anti-Photophobia</span><span data-lang-inline="zh">畏光防护</span></span><span class="product-tag"><span data-lang-inline="en" class="show">45+ Age</span><span data-lang-inline="zh">45岁以上</span></span></div>
+          <div class="product-desc"><span data-lang-inline="en" class="show">Engineered for age-related photophobia and dry eye. Manages dawn colour temperature and diffusion intensity to create a gentler visual environment — reducing squinting, tearing, and fatigue without over-darkening.</span><span data-lang-inline="ja">加齢性の畏光とドライアイに特化。晨光色温と拡散強度を管理し、過度に暗くせず穏やかな視覚環境を実現。</span><span data-lang-inline="ko">노화 관련 광과민증 및 안구건조증을 위해 특별히 설계. 새벽 색온도와 확산 강도를 관리하여 더 부드럽고 편안한 시각 환경 제공.</span><span data-lang-inline="zh">专为衰老性畏光与干眼而设计。通过调控晨光色温与扩散强度，构建更柔和的视觉环境——减少眯眼、流泪与疲劳，不过度遮光。</span></div>
+          <div class="product-price"><span data-lang-inline="en" class="show">From</span><span data-lang-inline="zh">起售价</span> $[Price]</div>
+        </div>
+      </div>
+
+      <!-- 5: 驾驶AI音频眼镜 -->
+      <div class="product-card">
+        <div class="product-img-box"><img src="product-drive.png" alt="Drive AI Audio Glasses"></div>
+        <div class="product-info">
+          <div class="product-series"><span data-lang-inline="en" class="show">Driving · AI Audio</span><span data-lang-inline="ja">ドライビング・AIオーディオ</span><span data-lang-inline="ko">드라이빙 · AI 오디오</span><span data-lang-inline="zh">驾驶 · AI音频</span></div>
+          <div class="product-name"><span data-lang-inline="en" class="show">Drive AI Audio Glasses</span><span data-lang-inline="ja">ドライブAIオーディオグラス</span><span data-lang-inline="ko">드라이브 AI 오디오 안경</span><span data-lang-inline="zh">驾驶AI音频眼镜</span></div>
+          <div class="product-tags"><span class="product-tag featured"><span data-lang-inline="en" class="show">New</span><span data-lang-inline="zh">新品</span></span><span class="product-tag"><span data-lang-inline="en" class="show">Anti-Glare Drive</span><span data-lang-inline="zh">驾驶防眩光</span></span><span class="product-tag"><span data-lang-inline="en" class="show">AI Audio</span><span data-lang-inline="zh">AI音频</span></span><span class="product-tag"><span data-lang-inline="en" class="show">Open-Ear</span><span data-lang-inline="zh">开放式耳机</span></span></div>
+          <div class="product-desc"><span data-lang-inline="en" class="show">Combines driving-optimised optical protection with built-in open-ear AI audio. Anti-glare diffusion eliminates windshield rainbow distortion while keeping phone screens readable. AI assistant integration for hands-free navigation and calls — all without blocking ambient road sound.</span><span data-lang-inline="ja">ドライビング最適化光学保護と内蔵オープンイヤーAIオーディオを融合。防眩拡散でフロントガラスの彩虹歪みを解消し、スマホ画面も読み取り可能。ハンズフリーナビと通話のAIアシスト — 周囲の音を遮断せず。</span><span data-lang-inline="ko">드라이빙 최적화 광학 보호와 내장 오픈이어 AI 오디오 결합. 눈부심 방지 확산으로 앞유리 무지개 왜곡을 없애고 스마트폰 화면도 읽을 수 있습니다. 핸즈프리 내비게이션과 통화를 위한 AI 어시스턴트 — 주변 도로 소리를 차단하지 않습니다.</span><span data-lang-inline="zh">将驾驶专用光学防护与内置开放式AI音频融为一体。防眩扩散消除挡风玻璃彩虹纹，同时保持手机屏幕可读。AI助手集成，免提导航与通话——不阻断周围道路环境音。</span></div>
           <div class="product-price"><span data-lang-inline="en" class="show">From</span><span data-lang-inline="zh">起售价</span> $[Price]</div>
         </div>
       </div>
 
     </div>
 
-    <!-- LENS TECH OVERVIEW -->
     <div class="lens-tech">
-      <div class="lens-tech-header">
-        <div class="lens-tech-title"><span data-lang-inline="en" class="show">What's inside every Revue lens</span><span data-lang-inline="ja">すべてのRevueレンズの内部構造</span><span data-lang-inline="ko">모든 Revue 렌즈 내부 구조</span><span data-lang-inline="zh">每片Revue镜片的内部结构</span></div>
-      </div>
+      <div class="lens-tech-header"><div class="lens-tech-title"><span data-lang-inline="en" class="show">What's inside every Revue lens</span><span data-lang-inline="ja">すべてのRevueレンズの内部構造</span><span data-lang-inline="ko">모든 Revue 렌즈 내부 구조</span><span data-lang-inline="zh">每片Revue镜片的内部结构</span></div></div>
       <div class="lens-tech-body">
-        <div class="lens-layer">
-          <div class="layer-num">防</div>
-          <div class="layer-title"><span data-lang-inline="en" class="show">Block — Light Stimulus</span><span data-lang-inline="ja">防 — 光刺激を遮断</span><span data-lang-inline="ko">방 — 광 자극 차단</span><span data-lang-inline="zh">防 — 阻断光刺激</span></div>
-          <div class="layer-desc"><span data-lang-inline="en" class="show">UV400, blue-light management (420–490nm), and nano diffusion film intercept harmful light before it reaches the eye.</span><span data-lang-inline="ja">UV400、ブルーライト管理（420〜490nm）、ナノ拡散フィルムが眼に届く前に有害光を遮断。</span><span data-lang-inline="ko">UV400, 블루라이트 관리(420~490nm), 나노 확산 필름이 눈에 도달하기 전에 유해한 빛을 차단.</span><span data-lang-inline="zh">UV400、蓝光管理（420-490nm）、纳米扩散薄膜，在光线到达眼睛之前截断有害光刺激。</span></div>
-        </div>
-        <div class="lens-layer">
-          <div class="layer-num">理</div>
-          <div class="layer-title"><span data-lang-inline="en" class="show">Convert — Visual Stimulus</span><span data-lang-inline="ja">理 — 視覚刺激を変換</span><span data-lang-inline="ko">리 — 시각 자극 변환</span><span data-lang-inline="zh">理 — 转化视觉刺激</span></div>
-          <div class="layer-desc"><span data-lang-inline="en" class="show">Colour temperature calibration and honeycomb diffusion convert electronic screen light properties into equivalent natural light — reducing retinal response stress.</span><span data-lang-inline="ja">色温調整と蜂巣状拡散が電子屏光特性を自然光相当に変換 — 網膜応答ストレスを低減。</span><span data-lang-inline="ko">색온도 보정과 벌집 확산이 전자 화면 빛 특성을 자연광으로 변환 — 망막 반응 스트레스 감소.</span><span data-lang-inline="zh">色温校准与蜂巢扩散将电子屏光特性转换为等效自然光——降低视网膜应激反应。</span></div>
-        </div>
-        <div class="lens-layer">
-          <div class="layer-num">护</div>
-          <div class="layer-title"><span data-lang-inline="en" class="show">Protect — Prevent Fatigue</span><span data-lang-inline="ja">護 — 疲労を予防</span><span data-lang-inline="ko">호 — 피로 예방</span><span data-lang-inline="zh">护 — 预防视疲劳</span></div>
-          <div class="layer-desc"><span data-lang-inline="en" class="show">Near-distance depth of field enhancement and off-axis contrast reduction keep eyes relaxed during extended wear — stopping fatigue before it accumulates.</span><span data-lang-inline="ja">近距景深強化と離軸コントラスト低減により、長時間装着中も眼をリラックスした状態に維持 — 疲労の蓄積を防ぐ。</span><span data-lang-inline="ko">근거리 피사계 심도 향상과 오프축 대비 감소로 장시간 착용 중에도 눈을 편안하게 유지 — 피로 누적을 방지.</span><span data-lang-inline="zh">近距景深增强与离轴对比降低，在长时间佩戴过程中保持眼部放松——在疲劳累积之前加以阻断。</span></div>
-        </div>
+        <div class="lens-layer"><div class="layer-num">防</div><div class="layer-title"><span data-lang-inline="en" class="show">Block — Light Stimulus</span><span data-lang-inline="zh">防 — 阻断光刺激</span></div><div class="layer-desc"><span data-lang-inline="en" class="show">UV400, blue-light management (420–490nm), and nano diffusion film intercept harmful light before it reaches the eye.</span><span data-lang-inline="zh">UV400、蓝光管理（420-490nm）、纳米扩散薄膜，在光线到达眼睛之前截断有害光刺激。</span></div></div>
+        <div class="lens-layer"><div class="layer-num">理</div><div class="layer-title"><span data-lang-inline="en" class="show">Convert — Visual Stimulus</span><span data-lang-inline="zh">理 — 转化视觉刺激</span></div><div class="layer-desc"><span data-lang-inline="en" class="show">Colour temperature calibration and honeycomb diffusion convert electronic screen light into equivalent natural light — reducing retinal response stress.</span><span data-lang-inline="zh">色温校准与蜂巢扩散将电子屏光特性转换为等效自然光——降低视网膜应激反应。</span></div></div>
+        <div class="lens-layer"><div class="layer-num">护</div><div class="layer-title"><span data-lang-inline="en" class="show">Protect — Prevent Fatigue</span><span data-lang-inline="zh">护 — 预防视疲劳</span></div><div class="layer-desc"><span data-lang-inline="en" class="show">Near-distance depth of field enhancement and off-axis contrast reduction keep eyes relaxed during extended wear — stopping fatigue before it accumulates.</span><span data-lang-inline="zh">近距景深增强与离轴对比降低，在长时间佩戴过程中保持眼部放松——在疲劳累积之前加以阻断。</span></div></div>
       </div>
     </div>
 
-    <!-- HOW TO ORDER -->
     <p class="section-label" style="margin-bottom:20px"><span data-lang-inline="en" class="show">How to order</span><span data-lang-inline="ja">ご注文の流れ</span><span data-lang-inline="ko">주문 방법</span><span data-lang-inline="zh">如何下单</span></p>
     <div class="steps">
-      <div class="step"><div class="step-num">01</div><div class="step-title"><span data-lang-inline="en" class="show">Virtual Try-On</span><span data-lang-inline="ja">バーチャル試着</span><span data-lang-inline="ko">가상 착용</span><span data-lang-inline="zh">虚拟试戴</span></div><div class="step-desc"><span data-lang-inline="en" class="show">Search 「聆观睿智亮睛鲸」 in WeChat to try frames on your photo using AI.</span><span data-lang-inline="ja">WeChatで「聆观睿智亮睛鲸」を検索してAI試着。</span><span data-lang-inline="ko">WeChat에서 「聆观睿智亮睛鲸」 검색하여 AI 착용.</span><span data-lang-inline="zh">微信搜索「聆观睿智亮睛鲸」AI虚拟试戴。</span></div></div>
-      <div class="step"><div class="step-num">02</div><div class="step-title"><span data-lang-inline="en" class="show">Select Frame</span><span data-lang-inline="ja">フレーム選択</span><span data-lang-inline="ko">프레임 선택</span><span data-lang-inline="zh">选择镜框</span></div><div class="step-desc"><span data-lang-inline="en" class="show">Choose your preferred frame style and series from the collection above.</span><span data-lang-inline="ja">上記コレクションからお好みのスタイルとシリーズを選択。</span><span data-lang-inline="ko">위 컬렉션에서 원하는 스타일과 시리즈 선택.</span><span data-lang-inline="zh">从上方系列中选择你喜欢的款式。</span></div></div>
-      <div class="step"><div class="step-num">03</div><div class="step-title"><span data-lang-inline="en" class="show">AI Rx Optimisation</span><span data-lang-inline="ja">AI Rx最適化</span><span data-lang-inline="ko">AI Rx 최적화</span><span data-lang-inline="zh">AI验光优化</span></div><div class="step-desc"><span data-lang-inline="en" class="show">Input your prescription. Our AI calibrates every parameter for your vision profile — included with every order.</span><span data-lang-inline="ja">処方箋を入力。AIがすべてのパラメータを調整 — 全注文に含まれます。</span><span data-lang-inline="ko">처방전 입력. AI가 모든 매개변수 조정 — 모든 주문에 포함.</span><span data-lang-inline="zh">输入验光数据，AI精准调校——每笔订单均包含此服务。</span></div></div>
-      <div class="step"><div class="step-num">04</div><div class="step-title"><span data-lang-inline="en" class="show">Receive & Protect</span><span data-lang-inline="ja">受け取って守る</span><span data-lang-inline="ko">받고 보호받기</span><span data-lang-inline="zh">收货即享防护</span></div><div class="step-desc"><span data-lang-inline="en" class="show">[Delivery time placeholder — e.g. 7–14 business days. International shipping available.]</span><span data-lang-inline="ja">[配送日数占位符 — 例：7〜14営業日。国際配送対応。]</span><span data-lang-inline="ko">[배송 시간 자리 표시자 — 예: 영업일 7~14일. 국제 배송 가능.]</span><span data-lang-inline="zh">[配送时效占位符——如7-14个工作日。支持国际配送。]</span></div></div>
+      <div class="step"><div class="step-num">01</div><div class="step-title"><span data-lang-inline="en" class="show">Virtual Try-On</span><span data-lang-inline="zh">虚拟试戴</span></div><div class="step-desc"><span data-lang-inline="en" class="show">Search 「聆观睿智亮睛鲸」 in WeChat to try frames on your photo using AI.</span><span data-lang-inline="zh">微信搜索「聆观睿智亮睛鲸」AI虚拟试戴。</span></div></div>
+      <div class="step"><div class="step-num">02</div><div class="step-title"><span data-lang-inline="en" class="show">Select Frame</span><span data-lang-inline="zh">选择镜框</span></div><div class="step-desc"><span data-lang-inline="en" class="show">Choose your preferred frame style and series from the collection above.</span><span data-lang-inline="zh">从上方系列中选择你喜欢的款式。</span></div></div>
+      <div class="step"><div class="step-num">03</div><div class="step-title"><span data-lang-inline="en" class="show">AI Rx Optimisation</span><span data-lang-inline="zh">AI验光优化</span></div><div class="step-desc"><span data-lang-inline="en" class="show">Input your prescription. AI calibrates every parameter — included with every order.</span><span data-lang-inline="zh">输入验光数据，AI精准调校——每笔订单均包含此服务。</span></div></div>
+      <div class="step"><div class="step-num">04</div><div class="step-title"><span data-lang-inline="en" class="show">Receive & Protect</span><span data-lang-inline="zh">收货即享防护</span></div><div class="step-desc"><span data-lang-inline="en" class="show">[Delivery time — e.g. 7–14 business days. International shipping available.]</span><span data-lang-inline="zh">[配送时效占位符——如7-14个工作日。支持国际配送。]</span></div></div>
     </div>
-
   </div>
   <footer>
     <div><div class="footer-logo">Revue · 聆观睿智</div><div class="footer-sub">重庆朝目聆观科技有限公司</div></div>
@@ -605,7 +478,7 @@ footer{border-top:0.5px solid var(--border);padding:24px 48px;display:flex;justi
 </div>
 
 
-<!-- ══════════════════ PAGE: ABOUT ══════════════════ -->
+<!-- ══════════════════ ABOUT ══════════════════ -->
 <div class="page" id="page-about">
   <nav>
     <button class="logo" onclick="goHome()">Revue<span class="logo-sub">聆观睿智</span></button>
@@ -624,65 +497,58 @@ footer{border-top:0.5px solid var(--border);padding:24px 48px;display:flex;justi
   <div class="subpage-hero">
     <button class="subpage-back" onclick="goHome()">← <span data-lang-inline="en" class="show">Back</span><span data-lang-inline="ja">戻る</span><span data-lang-inline="ko">뒤로</span><span data-lang-inline="zh">返回</span></button>
     <h1 class="subpage-title"><span data-lang-inline="en" class="show">About Revue</span><span data-lang-inline="ja">Revueについて</span><span data-lang-inline="ko">Revue 소개</span><span data-lang-inline="zh">关于我们</span></h1>
-    <p class="subpage-sub"><span data-lang-inline="en" class="show">Chongqing Chaomù Lingguan Technology Co., Ltd. — a cross-strait joint venture founded by a veteran Taiwanese optical expert, dedicated to vision protection and health-focused eyewear. Our core belief: prevention is always superior to treatment.</span><span data-lang-inline="ja">重慶朝目聆観科技有限公司 — 台湾の資深光学専門家が主導する両岸合弁企業。視力保護と健康眼鏡に特化。基本理念：予防は常に治療より優れている。</span><span data-lang-inline="ko">중경 조목영관 기술 유한공사 — 대만 베테랑 광학 전문가가 설립한 양안 합작 기업으로 시력 보호와 건강 안경에 전념합니다. 핵심 신념: 예방은 항상 치료보다 낫습니다.</span><span data-lang-inline="zh">重庆朝目聆观科技有限公司，由台湾资深光学专家牵头成立的两岸合资企业，专注于视力防护与保健类眼镜。我们的核心信念：预防永远胜于治疗。</span></p>
+    <p class="subpage-sub"><span data-lang-inline="en" class="show">Chongqing Chaomù Lingguan Technology Co., Ltd. — a cross-strait joint venture founded by a veteran Taiwanese optical expert, dedicated to vision protection and health-focused eyewear. Our core belief: prevention is always superior to treatment.</span><span data-lang-inline="ja">重慶朝目聆観科技有限公司 — 台湾の資深光学専門家が主導する両岸合弁企業。基本理念：予防は常に治療より優れている。</span><span data-lang-inline="ko">중경 조목영관 기술 유한공사 — 대만 베테랑 광학 전문가가 설립한 양안 합작 기업. 핵심 신념: 예방은 항상 치료보다 낫습니다.</span><span data-lang-inline="zh">重庆朝目聆观科技有限公司，由台湾资深光学专家牵头成立的两岸合资企业，专注于视力防护与保健类眼镜。核心信念：预防永远胜于治疗。</span></p>
   </div>
   <div class="subpage-body">
-
     <div class="about-grid">
       <div>
-        <p class="about-block-title"><span data-lang-inline="en" class="show">Our Mission</span><span data-lang-inline="ja">ミッション</span><span data-lang-inline="ko">미션</span><span data-lang-inline="zh">我们的使命</span></p>
-        <p class="about-text"><span data-lang-inline="en" class="show">To protect every person's vision through nano-biomimetic optical technology — intervening at the light-stimulus level before visual fatigue and damage accumulate. We serve the world with the best products, at the best price, and the most comfortable experience.</span><span data-lang-inline="ja">ナノ仿生光学技術によってすべての人の視力を守る — 視疲労と損傷が蓄積する前に光刺激レベルで介入。最高の製品を、最高の価格で、最も快適な体験でお届けします。</span><span data-lang-inline="ko">나노 생체모방 광학 기술을 통해 모든 사람의 시력을 보호합니다 — 시각 피로와 손상이 축적되기 전에 광 자극 수준에서 개입합니다. 최고의 제품을, 최고의 가격으로, 가장 편안한 경험으로 제공합니다.</span><span data-lang-inline="zh">以纳米仿生光学技术守护每个人的视力——在视疲劳与损伤累积之前，从光刺激层面主动介入。以最好的产品、最好的价格、最舒适的体验服务大家。</span></p>
+        <p class="about-block-title"><span data-lang-inline="en" class="show">Our Mission</span><span data-lang-inline="zh">我们的使命</span></p>
+        <p class="about-text"><span data-lang-inline="en" class="show">To protect every person's vision through nano-biomimetic optical technology — intervening at the light-stimulus level before visual fatigue and damage accumulate. We serve the world with the best products, at the best price, and the most comfortable experience.</span><span data-lang-inline="ja">ナノ仿生光学技術によってすべての人の視力を守る。最高の製品を、最高の価格で、最も快適な体験でお届けします。</span><span data-lang-inline="ko">나노 생체모방 광학 기술을 통해 모든 사람의 시력을 보호합니다. 최고의 제품을, 최고의 가격으로, 가장 편안한 경험으로 제공합니다.</span><span data-lang-inline="zh">以纳米仿生光学技术守护每个人的视力——在视疲劳与损伤累积之前，从光刺激层面主动介入。以最好的产品、最好的价格、最舒适的体验服务大家。</span></p>
       </div>
       <div>
-        <p class="about-block-title"><span data-lang-inline="en" class="show">Our Technology</span><span data-lang-inline="ja">技術</span><span data-lang-inline="ko">기술</span><span data-lang-inline="zh">核心技术</span></p>
-        <p class="about-text"><span data-lang-inline="en" class="show">Our flagship series — "Lingguan Ruizhi Revue ai+" — features nano-grade all-weather anti-fatigue ecological smart lenses. The proprietary 15-layer PVC nano film, mimicking crystalline protein particle honeycomb structures, converts electronic screen light into the optical equivalent of natural sunlight — a technology unmatched globally in performance-to-price ratio.</span><span data-lang-inline="ja">主力シリーズ「聆観睿智 Revue ai+」は、ナノ級全天候抗疲労生態スマートレンズを搭載。独自の15層PVCナノフィルムは仿晶状体蛋白粒子蜂巢構造を模倣し、電子屏光を自然光の光学的相当物に変換 — 性価比で世界に類を見ない技術。</span><span data-lang-inline="ko">주력 시리즈 「영관예지 Revue ai+」는 나노급 전천후 항피로 생태 스마트 렌즈를 탑재. 독점 15층 PVC 나노 필름은 결정 단백질 입자 벌집 구조를 모방하여 전자 화면 빛을 자연 태양광의 광학적 동등물로 변환 — 가성비에서 세계에서 유일한 기술.</span><span data-lang-inline="zh">主力系列「聆观睿智 Revue ai+」，搭载纳米级全天候抗疲劳生态智能镜片。独家15层PVC纳米膜，仿晶状体蛋白粒子蜂巢结构，将电子屏光转换为等效自然光——性价比全球独步。</span></p>
+        <p class="about-block-title"><span data-lang-inline="en" class="show">Our Technology</span><span data-lang-inline="zh">核心技术</span></p>
+        <p class="about-text"><span data-lang-inline="en" class="show">Our flagship series — "Lingguan Ruizhi Revue ai+" — features nano-grade all-weather anti-fatigue ecological smart lenses. The proprietary 15-layer PVC nano film, mimicking crystalline protein particle honeycomb structures, converts electronic screen light into the optical equivalent of natural sunlight — a technology unmatched globally in performance-to-price ratio.</span><span data-lang-inline="ja">主力シリーズ「聆観睿智 Revue ai+」は独自の15層PVCナノフィルムを採用。性価比で世界独歩。</span><span data-lang-inline="ko">주력 시리즈 「영관예지 Revue ai+」는 독점 15층 PVC 나노 필름을 탑재. 세계 최고 가성비.</span><span data-lang-inline="zh">主力系列「聆观睿智 Revue ai+」，搭载纳米级全天候抗疲劳生态智能镜片。独家15层PVC纳米膜，仿晶状体蛋白粒子蜂巢结构，将电子屏光转换为等效自然光——性价比全球独步。</span></p>
       </div>
     </div>
 
-    <p class="about-block-title" style="margin-bottom:16px"><span data-lang-inline="en" class="show">Company Facts</span><span data-lang-inline="ja">会社概要</span><span data-lang-inline="ko">회사 정보</span><span data-lang-inline="zh">公司信息</span></p>
+    <p class="about-block-title" style="margin-bottom:16px"><span data-lang-inline="en" class="show">Company Facts</span><span data-lang-inline="zh">公司信息</span></p>
     <div class="cred-grid" style="margin-bottom:48px">
-      <div class="cred-item">
-        <div class="cred-label"><span data-lang-inline="en" class="show">Full Name</span><span data-lang-inline="zh">公司全称</span></div>
-        <div class="cred-value">重庆朝目聆观科技有限公司<br><span style="font-size:12px;color:var(--text2)">Chongqing Chaomù Lingguan Technology Co., Ltd.</span></div>
+      <div class="cred-item"><div class="cred-label"><span data-lang-inline="en" class="show">Full Name</span><span data-lang-inline="zh">公司全称</span></div><div class="cred-value">重庆朝目聆观科技有限公司<br><span style="font-size:12px;color:var(--text2)">Chongqing Chaomù Lingguan Technology Co., Ltd.</span></div></div>
+      <div class="cred-item"><div class="cred-label"><span data-lang-inline="en" class="show">Office</span><span data-lang-inline="zh">办公地址</span></div><div class="cred-value"><span data-lang-inline="en" class="show">Cloud Valley 5, Bldg 17F, Tian'an Digital City, Dadukou District, Chongqing</span><span data-lang-inline="ja">中国重慶市大渡口区天安数碼城云谷5幢17楼</span><span data-lang-inline="ko">중국 충칭시 다두커우구 톈안 디지털 시티 클라우드 밸리 5동 17층</span><span data-lang-inline="zh">重庆市大渡口区天安数码城云谷5幢17楼</span></div></div>
+      <div class="cred-item"><div class="cred-label"><span data-lang-inline="en" class="show">Type</span><span data-lang-inline="zh">企业性质</span></div><div class="cred-value"><span data-lang-inline="en" class="show">Cross-strait joint venture · Taiwan optical expertise</span><span data-lang-inline="zh">两岸合资企业 · 台湾资深光学专家主导</span></div></div>
+      <div class="cred-item"><div class="cred-label"><span data-lang-inline="en" class="show">Certifications</span><span data-lang-inline="zh">质检认证</span></div><div class="cred-value">NOTC · BS EN ISO 12312-1:2013 · ANSI Z80.3</div></div>
+    </div>
+
+    <p class="about-block-title" style="margin-bottom:16px"><span data-lang-inline="en" class="show">Quality Certifications</span><span data-lang-inline="zh">质检认证</span></p>
+    <div class="cert-grid">
+      <div class="cert-item">
+        <img class="cert-img" src="cert-national.png" alt="National standard certification">
+        <div class="cert-label"><span data-lang-inline="en" class="show">National Standard · NOTC Certified</span><span data-lang-inline="zh">质检国标 · 国家眼镜产品质量监督检验中心</span></div>
       </div>
-      <div class="cred-item">
-        <div class="cred-label"><span data-lang-inline="en" class="show">Location</span><span data-lang-inline="zh">地址</span></div>
-        <div class="cred-value"><span data-lang-inline="en" class="show">Cloud Valley 5, Bldg 17F, Tian'an Digital City, Dadukou District, Chongqing</span><span data-lang-inline="zh">重庆市大渡口区天安数码城云谷5幢17楼</span></div>
-      </div>
-      <div class="cred-item">
-        <div class="cred-label"><span data-lang-inline="en" class="show">Type</span><span data-lang-inline="zh">企业性质</span></div>
-        <div class="cred-value"><span data-lang-inline="en" class="show">Cross-strait joint venture · Taiwan optical expertise</span><span data-lang-inline="zh">两岸合资企业 · 台湾资深光学专家主导</span></div>
-      </div>
-      <div class="cred-item">
-        <div class="cred-label"><span data-lang-inline="en" class="show">Certifications</span><span data-lang-inline="zh">质检认证</span></div>
-        <div class="cred-value"><span data-lang-inline="en" class="show">NOTC National Eyewear Quality Inspection · BS EN ISO 12312-1:2013 · ANSI Z80.3</span><span data-lang-inline="zh">国家眼镜产品质量监督检验中心 · BS EN ISO 12312-1:2013 · ANSI Z80.3</span></div>
+      <div class="cert-item">
+        <img class="cert-img" src="cert-report.png" alt="International test report">
+        <div class="cert-label"><span data-lang-inline="en" class="show">International Standard · BS EN ISO · ANSI</span><span data-lang-inline="zh">质检国际标 · BS EN ISO 12312-1:2013 · ANSI Z80.3</span></div>
       </div>
     </div>
 
-    <p class="about-block-title" style="margin-bottom:16px"><span data-lang-inline="en" class="show">Awards & Recognition</span><span data-lang-inline="ja">受賞・表彰</span><span data-lang-inline="ko">수상 및 표창</span><span data-lang-inline="zh">奖项与荣誉</span></p>
+    <p class="about-block-title" style="margin-bottom:16px"><span data-lang-inline="en" class="show">Awards & Recognition</span><span data-lang-inline="zh">奖项与荣誉</span></p>
     <div class="awards-grid" style="margin-bottom:48px">
       <div class="award-item">
-        <div class="award-icon">🏆</div>
-        <div>
-          <div class="award-title"><span data-lang-inline="en" class="show">Cross-Strait Startup Future Star</span><span data-lang-inline="zh">海峡创业未来之星奖</span></div>
-          <div class="award-desc"><span data-lang-inline="en" class="show">首届重庆海峡两岸青年创新创业大赛 · September 2025 · Chongqing</span><span data-lang-inline="zh">首届重庆海峡两岸青年创新创业大赛 · 2025年9月 · 重庆</span></div>
-        </div>
+        <img class="award-img" src="honor.png" alt="Award ceremony">
+        <div class="award-content"><div class="award-title">🏆 <span data-lang-inline="en" class="show">Cross-Strait Startup Future Star · 2025</span><span data-lang-inline="zh">海峡创业未来之星奖 · 2025</span></div><div class="award-desc"><span data-lang-inline="en" class="show">首届重庆海峡两岸青年创新创业大赛 · September 2025 · Chongqing</span><span data-lang-inline="zh">首届重庆海峡两岸青年创新创业大赛 · 2025年9月 · 重庆</span></div></div>
       </div>
       <div class="award-item">
-        <div class="award-icon">⭐</div>
-        <div>
-          <div class="award-title"><span data-lang-inline="en" class="show">Sci-Tech Exploration Star</span><span data-lang-inline="zh">科创探索之星奖</span></div>
-          <div class="award-desc"><span data-lang-inline="en" class="show">重庆"义渡赛创会" · Chengdu-Chongqing Twin Cities Economic Circle · 2025</span><span data-lang-inline="zh">重庆"义渡赛创会"暨成渝双城经济圈科创探索之星 · 2025</span></div>
-        </div>
+        <img class="award-img" src="honor.png" alt="Sci-tech award">
+        <div class="award-content"><div class="award-title">⭐ <span data-lang-inline="en" class="show">Sci-Tech Exploration Star · 2025</span><span data-lang-inline="zh">科创探索之星奖 · 2025</span></div><div class="award-desc"><span data-lang-inline="en" class="show">重庆"义渡赛创会" · Chengdu-Chongqing Twin Cities Economic Circle · 2025</span><span data-lang-inline="zh">重庆"义渡赛创会"暨成渝双城经济圈科创探索之星 · 2025</span></div></div>
       </div>
     </div>
 
-    <p class="about-block-title" style="margin-bottom:16px"><span data-lang-inline="en" class="show">Our Values</span><span data-lang-inline="ja">バリュー</span><span data-lang-inline="ko">가치</span><span data-lang-inline="zh">我们的价值观</span></p>
+    <p class="about-block-title" style="margin-bottom:16px"><span data-lang-inline="en" class="show">Our Values</span><span data-lang-inline="zh">我们的价值观</span></p>
     <div class="values-grid">
-      <div class="value-item"><div class="value-title"><span data-lang-inline="en" class="show">Prevention First</span><span data-lang-inline="ja">予防最優先</span><span data-lang-inline="ko">예방 우선</span><span data-lang-inline="zh">预防优先</span></div><div class="value-desc"><span data-lang-inline="en" class="show">We engineer lenses that stop damage before it occurs — not glasses that help you after vision already deteriorates.</span><span data-lang-inline="zh">我们设计的镜片阻断损伤于发生之前——而非视力已经衰退后的补救工具。</span></div></div>
-      <div class="value-item"><div class="value-title"><span data-lang-inline="en" class="show">Scientific Precision</span><span data-lang-inline="ja">科学的精密さ</span><span data-lang-inline="ko">과학적 정밀함</span><span data-lang-inline="zh">科学精准</span></div><div class="value-desc"><span data-lang-inline="en" class="show">Every parameter is measurable and certified. NOTC national inspection. BS EN ISO and ANSI international standards.</span><span data-lang-inline="zh">每项参数均可测量、可认证。国家眼镜质检中心认证，符合BS EN ISO与ANSI国际标准。</span></div></div>
-      <div class="value-item"><div class="value-title"><span data-lang-inline="en" class="show">Accessible Protection</span><span data-lang-inline="ja">誰もが手にできる保護</span><span data-lang-inline="ko">접근 가능한 보호</span><span data-lang-inline="zh">让防护触手可及</span></div><div class="value-desc"><span data-lang-inline="en" class="show">World-leading performance-to-price ratio. The best protection should not be a luxury.</span><span data-lang-inline="zh">全球领先的性价比。最好的防护不应该是奢侈品。</span></div></div>
-      <div class="value-item"><div class="value-title"><span data-lang-inline="en" class="show">Personalised Care</span><span data-lang-inline="ja">個人化ケア</span><span data-lang-inline="ko">개인화 케어</span><span data-lang-inline="zh">个性化关怀</span></div><div class="value-desc"><span data-lang-inline="en" class="show">AI Rx optimisation means every pair is calibrated to your unique vision profile — not a one-size-fits-all product.</span><span data-lang-inline="zh">AI验光优化意味着每一副眼镜都针对你的视力档案个性化调校——而非千人一面的标准品。</span></div></div>
+      <div class="value-item"><div class="value-title"><span data-lang-inline="en" class="show">Prevention First</span><span data-lang-inline="zh">预防优先</span></div><div class="value-desc"><span data-lang-inline="en" class="show">We engineer lenses that stop damage before it occurs — not glasses that help you after vision already deteriorates.</span><span data-lang-inline="zh">我们设计的镜片阻断损伤于发生之前——而非视力已经衰退后的补救工具。</span></div></div>
+      <div class="value-item"><div class="value-title"><span data-lang-inline="en" class="show">Scientific Precision</span><span data-lang-inline="zh">科学精准</span></div><div class="value-desc"><span data-lang-inline="en" class="show">Every parameter is measurable and certified. NOTC national inspection. BS EN ISO and ANSI international standards.</span><span data-lang-inline="zh">每项参数均可测量、可认证。国家眼镜质检中心认证，符合BS EN ISO与ANSI国际标准。</span></div></div>
+      <div class="value-item"><div class="value-title"><span data-lang-inline="en" class="show">Accessible Protection</span><span data-lang-inline="zh">让防护触手可及</span></div><div class="value-desc"><span data-lang-inline="en" class="show">World-leading performance-to-price ratio. The best protection should not be a luxury.</span><span data-lang-inline="zh">全球领先的性价比。最好的防护不应该是奢侈品。</span></div></div>
+      <div class="value-item"><div class="value-title"><span data-lang-inline="en" class="show">Personalised Care</span><span data-lang-inline="zh">个性化关怀</span></div><div class="value-desc"><span data-lang-inline="en" class="show">AI Rx optimisation means every pair is calibrated to your unique vision profile — not a one-size-fits-all product.</span><span data-lang-inline="zh">AI验光优化意味着每一副眼镜都针对你的视力档案个性化调校——而非千人一面的标准品。</span></div></div>
     </div>
   </div>
   <footer>
@@ -695,7 +561,7 @@ footer{border-top:0.5px solid var(--border);padding:24px 48px;display:flex;justi
 </div>
 
 
-<!-- ══════════════════ PAGE: CONTACT ══════════════════ -->
+<!-- ══════════════════ CONTACT ══════════════════ -->
 <div class="page" id="page-contact">
   <nav>
     <button class="logo" onclick="goHome()">Revue<span class="logo-sub">聆观睿智</span></button>
@@ -714,20 +580,17 @@ footer{border-top:0.5px solid var(--border);padding:24px 48px;display:flex;justi
   <div class="subpage-hero">
     <button class="subpage-back" onclick="goHome()">← <span data-lang-inline="en" class="show">Back</span><span data-lang-inline="ja">戻る</span><span data-lang-inline="ko">뒤로</span><span data-lang-inline="zh">返回</span></button>
     <h1 class="subpage-title"><span data-lang-inline="en" class="show">Get in Touch</span><span data-lang-inline="ja">お問い合わせ</span><span data-lang-inline="ko">문의하기</span><span data-lang-inline="zh">联系我们</span></h1>
-    <p class="subpage-sub"><span data-lang-inline="en" class="show">For product enquiries, wholesale partnerships, or optical consultation — reach us through the channels below. Our team includes veteran optical experts ready to advise on vision protection.</span><span data-lang-inline="ja">製品に関するお問い合わせ、卸売パートナーシップ、または光学コンサルタントは以下からご連絡ください。</span><span data-lang-inline="ko">제품 문의, 도매 파트너십, 또는 광학 상담은 아래 채널을 통해 연락하세요.</span><span data-lang-inline="zh">产品咨询、批发合作或光学专业咨询，请通过以下渠道联系我们。我们的团队拥有资深光学专家，随时为您提供视力防护建议。</span></p>
+    <p class="subpage-sub"><span data-lang-inline="en" class="show">For product enquiries, wholesale partnerships, or optical consultation — reach us through the channels below.</span><span data-lang-inline="ja">製品に関するお問い合わせ、卸売パートナーシップ、または光学コンサルタントは以下からご連絡ください。</span><span data-lang-inline="ko">제품 문의, 도매 파트너십, 또는 광학 상담은 아래 채널을 통해 연락하세요.</span><span data-lang-inline="zh">产品咨询、批发合作或光学专业咨询，请通过以下渠道联系我们。</span></p>
   </div>
   <div class="subpage-body">
     <div class="contact-grid">
       <div class="contact-block">
-        <p class="contact-block-title"><span data-lang-inline="en" class="show">Direct Contact</span><span data-lang-inline="ja">直接連絡</span><span data-lang-inline="ko">직접 연락</span><span data-lang-inline="zh">直接联系</span></p>
+        <p class="contact-block-title"><span data-lang-inline="en" class="show">Direct Contact</span><span data-lang-inline="zh">直接联系</span></p>
         <div class="contact-item"><div class="contact-label">Email</div><div class="contact-value">hello@getrevue.me</div></div>
         <div class="contact-item"><div class="contact-label"><span data-lang-inline="en" class="show">Business / Wholesale</span><span data-lang-inline="zh">商务合作 / 批发</span></div><div class="contact-value">business@getrevue.me</div></div>
         <div class="contact-item"><div class="contact-label">WeChat</div><div class="contact-value">[微信号占位符]</div></div>
         <div class="contact-item"><div class="contact-label">Instagram</div><div class="contact-value">@[账号占位符]</div></div>
-        <div class="contact-item">
-          <div class="contact-label"><span data-lang-inline="en" class="show">Office</span><span data-lang-inline="zh">办公地址</span></div>
-          <div class="contact-value"><span data-lang-inline="en" class="show">Cloud Valley 5, Bldg 17F, Tian'an Digital City,<br>Dadukou District, Chongqing, China</span><span data-lang-inline="ja">中国重慶市大渡口区天安数碼城云谷5幢17楼</span><span data-lang-inline="ko">중국 충칭시 다두커우구 톈안 디지털 시티 클라우드 밸리 5동 17층</span><span data-lang-inline="zh">重庆市大渡口区天安数码城云谷5幢17楼</span></div>
-        </div>
+        <div class="contact-item"><div class="contact-label"><span data-lang-inline="en" class="show">Office</span><span data-lang-inline="zh">办公地址</span></div><div class="contact-value"><span data-lang-inline="en" class="show">Cloud Valley 5, Bldg 17F, Tian'an Digital City, Dadukou District, Chongqing, China</span><span data-lang-inline="ja">中国重慶市大渡口区天安数碼城云谷5幢17楼</span><span data-lang-inline="ko">중국 충칭시 다두커우구 톈안 디지털 시티 클라우드 밸리 5동 17층</span><span data-lang-inline="zh">重庆市大渡口区天安数码城云谷5幢17楼</span></div></div>
       </div>
       <div class="contact-block">
         <p class="contact-block-title"><span data-lang-inline="en" class="show">WeChat Mini Program</span><span data-lang-inline="ja">WeChatミニプログラム</span><span data-lang-inline="ko">WeChat 미니 프로그램</span><span data-lang-inline="zh">微信小程序</span></p>
@@ -743,11 +606,11 @@ footer{border-top:0.5px solid var(--border);padding:24px 48px;display:flex;justi
     <div class="contact-form">
       <p class="form-title"><span data-lang-inline="en" class="show">Send a message</span><span data-lang-inline="ja">メッセージを送る</span><span data-lang-inline="ko">메시지 보내기</span><span data-lang-inline="zh">发送消息</span></p>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-        <div class="form-row"><label class="form-label"><span data-lang-inline="en" class="show">Name</span><span data-lang-inline="ja">お名前</span><span data-lang-inline="ko">이름</span><span data-lang-inline="zh">姓名</span></label><input class="form-input" type="text"></div>
+        <div class="form-row"><label class="form-label"><span data-lang-inline="en" class="show">Name</span><span data-lang-inline="zh">姓名</span></label><input class="form-input" type="text"></div>
         <div class="form-row"><label class="form-label">Email</label><input class="form-input" type="email"></div>
       </div>
-      <div class="form-row"><label class="form-label"><span data-lang-inline="en" class="show">Subject</span><span data-lang-inline="ja">件名</span><span data-lang-inline="ko">제목</span><span data-lang-inline="zh">主题</span></label><input class="form-input" type="text"></div>
-      <div class="form-row"><label class="form-label"><span data-lang-inline="en" class="show">Message</span><span data-lang-inline="ja">メッセージ</span><span data-lang-inline="ko">메시지</span><span data-lang-inline="zh">消息内容</span></label><textarea class="form-textarea"></textarea></div>
+      <div class="form-row"><label class="form-label"><span data-lang-inline="en" class="show">Subject</span><span data-lang-inline="zh">主题</span></label><input class="form-input" type="text"></div>
+      <div class="form-row"><label class="form-label"><span data-lang-inline="en" class="show">Message</span><span data-lang-inline="zh">消息内容</span></label><textarea class="form-textarea"></textarea></div>
       <button class="btn-primary" style="margin-top:8px"><span data-lang-inline="en" class="show">Send Message</span><span data-lang-inline="ja">送信する</span><span data-lang-inline="ko">메시지 보내기</span><span data-lang-inline="zh">发送</span></button>
       <p style="font-size:11px;color:var(--text3);margin-top:12px"><span data-lang-inline="en" class="show">Note: Form submission requires backend setup. Please contact us directly via email in the meantime.</span><span data-lang-inline="zh">注：表单提交功能需要后端配置，目前请直接通过邮件联系我们。</span></p>
     </div>
@@ -762,53 +625,48 @@ footer{border-top:0.5px solid var(--border);padding:24px 48px;display:flex;justi
 </div>
 
 
-<!-- ══════════════════ MODAL: TRY-ON ══════════════════ -->
+<!-- MODAL -->
 <div id="tryon-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:999;align-items:center;justify-content:center">
   <div style="background:var(--bg);max-width:460px;width:90%;padding:40px;position:relative">
     <button onclick="closeTryOnModal()" style="position:absolute;top:14px;right:18px;border:none;background:none;color:var(--text2);font-size:22px;cursor:pointer;line-height:1">×</button>
     <h2 style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;margin-bottom:12px"><span data-lang-inline="en" class="show">AI Virtual Try-On</span><span data-lang-inline="ja">AIバーチャル試着</span><span data-lang-inline="ko">AI 가상 착용</span><span data-lang-inline="zh">AI虚拟试戴</span></h2>
-    <p style="font-size:13px;color:var(--text2);line-height:1.75;margin-bottom:22px">
-      <span data-lang-inline="en" class="show">Our AI try-on experience is currently available on the <strong>WeChat Mini Program</strong>. Open WeChat and search:</span>
-      <span data-lang-inline="ja">AIバーチャル試着は現在<strong>WeChatミニプログラム</strong>でご利用いただけます。WeChatを開いて検索：</span>
-      <span data-lang-inline="ko">AI 가상 착용은 현재 <strong>WeChat 미니 프로그램</strong>에서 사용 가능합니다. WeChat을 열고 검색하세요:</span>
-      <span data-lang-inline="zh">AI虚拟试戴目前在<strong>微信小程序</strong>中提供。打开微信，搜索：</span>
-    </p>
+    <p style="font-size:13px;color:var(--text2);line-height:1.75;margin-bottom:22px"><span data-lang-inline="en" class="show">Our AI try-on is currently available on the <strong>WeChat Mini Program</strong>. Open WeChat and search:</span><span data-lang-inline="ja">AIバーチャル試着は現在<strong>WeChatミニプログラム</strong>でご利用いただけます。WeChatを開いて検索：</span><span data-lang-inline="ko">AI 가상 착용은 현재 <strong>WeChat 미니 프로그램</strong>에서 사용 가능합니다. WeChat을 열고 검색하세요:</span><span data-lang-inline="zh">AI虚拟试戴目前在<strong>微信小程序</strong>中提供。打开微信，搜索：</span></p>
     <div style="background:var(--bg2);border:0.5px solid var(--border2);padding:20px;text-align:center;margin-bottom:16px">
       <p style="font-size:19px;font-weight:500;color:var(--text)">聆观睿智亮睛鲸</p>
       <p style="font-size:10px;color:var(--text3);margin-top:6px;text-transform:uppercase;letter-spacing:0.1em">WeChat Mini Program</p>
     </div>
-    <p style="font-size:12px;color:var(--text3)"><span data-lang-inline="en" class="show">Web-based try-on and AI Rx optimisation service coming soon.</span><span data-lang-inline="ja">Web版試着とAI Rx最適化サービスは近日公開予定。</span><span data-lang-inline="ko">웹 기반 착용 및 AI Rx 최적화 서비스 곧 출시.</span><span data-lang-inline="zh">网页版试戴及AI验光优化服务即将上线。</span></p>
+    <p style="font-size:12px;color:var(--text3)"><span data-lang-inline="en" class="show">Web-based try-on and AI Rx optimisation coming soon.</span><span data-lang-inline="ja">Web版試着とAI Rx最適化は近日公開予定。</span><span data-lang-inline="ko">웹 기반 착용 및 AI Rx 최적화 곧 출시.</span><span data-lang-inline="zh">网页版试戴及AI验光优化服务即将上线。</span></p>
   </div>
 </div>
 
 <script>
-var currentLang = 'en';
-function setLang(lang, btn) {
-  currentLang = lang;
-  document.querySelectorAll('[data-lang-inline]').forEach(function(el) {
-    el.classList.toggle('show', el.getAttribute('data-lang-inline') === lang);
+var currentLang='en';
+function setLang(lang,btn){
+  currentLang=lang;
+  document.querySelectorAll('[data-lang-inline]').forEach(function(el){
+    el.classList.toggle('show',el.getAttribute('data-lang-inline')===lang);
   });
-  document.querySelectorAll('.lang-btn').forEach(function(b) { b.classList.remove('active'); });
-  if (btn) btn.classList.add('active');
+  document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.remove('active');});
+  if(btn)btn.classList.add('active');
 }
-function goPage(name) {
-  document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
-  var target = document.getElementById('page-' + name);
-  if (target) { target.classList.add('active'); window.scrollTo(0,0); }
-  if (target) {
-    target.querySelectorAll('.lang-btn').forEach(function(b) {
-      var map = {'EN':'en','日本語':'ja','한국어':'ko','中文':'zh'};
-      b.classList.toggle('active', map[b.textContent.trim()] === currentLang);
+function goPage(name){
+  document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active');});
+  var target=document.getElementById('page-'+name);
+  if(target){target.classList.add('active');window.scrollTo(0,0);}
+  if(target){
+    target.querySelectorAll('.lang-btn').forEach(function(b){
+      var map={'EN':'en','日本語':'ja','한국어':'ko','中文':'zh'};
+      b.classList.toggle('active',map[b.textContent.trim()]===currentLang);
     });
-    target.querySelectorAll('[data-lang-inline]').forEach(function(el) {
-      el.classList.toggle('show', el.getAttribute('data-lang-inline') === currentLang);
+    target.querySelectorAll('[data-lang-inline]').forEach(function(el){
+      el.classList.toggle('show',el.getAttribute('data-lang-inline')===currentLang);
     });
   }
 }
-function goHome() { goPage('home'); }
-function showTryOnModal() { document.getElementById('tryon-modal').style.display = 'flex'; }
-function closeTryOnModal() { document.getElementById('tryon-modal').style.display = 'none'; }
-document.getElementById('tryon-modal').addEventListener('click', function(e) { if (e.target === this) closeTryOnModal(); });
+function goHome(){goPage('home');}
+function showTryOnModal(){document.getElementById('tryon-modal').style.display='flex';}
+function closeTryOnModal(){document.getElementById('tryon-modal').style.display='none';}
+document.getElementById('tryon-modal').addEventListener('click',function(e){if(e.target===this)closeTryOnModal();});
 </script>
 </body>
 </html>
